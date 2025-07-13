@@ -14,6 +14,13 @@
     "text": "My team and I created this poster for our Ecology class as part of our lab final. We were also fortunate enough to present the poster as guests for the Department of Applied Environmental Science Fall 2024 Capstone Festival at our university!"
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "My name is Aiden Roach and I am studying biology, statistics, and environmental science at California State University of Monterey Bay. After undergraduate school, I want to go to graduate school for a Ph.D. in ecology or population biology. For my career, I want to study the migration patterns of large mammals to make urban development friendlier towards our animal neighbors. Whenever I have free time, I like to go tidepooling, crochet, and watch romance movies with my cat Moose.\n\n\n\nSometimes Moose helps me with my coding. He’s a smart boy."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Aiden Roach",
@@ -35,10 +42,45 @@
     "text": "Experience\nCooperative Learning Center | Front Desk Assistant | December 2022 - present\nDepartment of Mathematics and Statistics | Instructional Student Assistant | November 2023 - present\nCalifornia Marina State Beach | Volunteer | February 2025 - May 2025\nSan Diego Zoo Wildlife Alliance | Volunteer | May 2025 - August 2025"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
+    "objectID": "stat210_project.html",
+    "href": "stat210_project.html",
+    "title": "STAT 210 Coding Project",
     "section": "",
-    "text": "My name is Aiden Roach and I am studying biology, statistics, and environmental science at California State University of Monterey Bay. After undergraduate school, I want to go to graduate school for a Ph.D. in ecology or population biology. For my career, I want to study the migration patterns of large mammals to make urban development friendlier towards our animal neighbors. Whenever I have free time, I like to go tidepooling, crochet, and watch romance movies with my cat Moose.\n\n\n\nSometimes Moose helps me with my coding. He’s a smart boy."
+    "text": "For this project, I used a dataset looking at mammal abundance in Prince Albert National Park in Canada. The data was collected using seven snow transects. After 48 hours, the tracks left by mammals were recorded every 100 meters. The transects were refreshed either by fresh snowfall or by a drag pulled by a snowmobile. There are a lot of variables included, but the most important ones for my research questions are period which is recorded as a character, month, day, and year which are recorded as integers, cloudcover which is an integer, precipitation which is a character, temperature which is an integer, and plant community which is a character. Each species is listed as a variable with their presence recorded at a one and their absence recorded as a zero. Some research questions I want to answer are how does species abundance vary over time, over temperature, and over different plant communities?"
+  },
+  {
+    "objectID": "stat210_project.html#data-description",
+    "href": "stat210_project.html#data-description",
+    "title": "STAT 210 Coding Project",
+    "section": "",
+    "text": "For this project, I used a dataset looking at mammal abundance in Prince Albert National Park in Canada. The data was collected using seven snow transects. After 48 hours, the tracks left by mammals were recorded every 100 meters. The transects were refreshed either by fresh snowfall or by a drag pulled by a snowmobile. There are a lot of variables included, but the most important ones for my research questions are period which is recorded as a character, month, day, and year which are recorded as integers, cloudcover which is an integer, precipitation which is a character, temperature which is an integer, and plant community which is a character. Each species is listed as a variable with their presence recorded at a one and their absence recorded as a zero. Some research questions I want to answer are how does species abundance vary over time, over temperature, and over different plant communities?"
+  },
+  {
+    "objectID": "stat210_project.html#data-cleaning",
+    "href": "stat210_project.html#data-cleaning",
+    "title": "STAT 210 Coding Project",
+    "section": "Data Cleaning",
+    "text": "Data Cleaning\nIn order to answer these research questions, the data has to be edited to make visualization easier. First, I selected only the variables I am interested in. Then, since values considered N/A were not recognized by R, I had to reassign the missing values so that R could understand those values were missing. Next, I reassigned the types of variables recorded to ensure that words were being interpreted by R as words and that numbers were being interpreted by R as numbers. The final step to clean this data was rotating the data so that each row contained the information for a singular observation rather than multiple. This makes visualization much easier!"
+  },
+  {
+    "objectID": "stat210_project.html#plant-communities",
+    "href": "stat210_project.html#plant-communities",
+    "title": "STAT 210 Coding Project",
+    "section": "Plant Communities",
+    "text": "Plant Communities\nThe first graphic shows that there is some variation in average species richness between the different plant communities. Tamarack bog was the least diverse with an average species richness of about 0.5. Dry grassland was the most diverse with an average species richness of about 0.95. The second graphic shows how each individual mammal counts vary across the plant communities. Some mammals, such as deer and wolves, have visually higher counts in certain communities compared to others. Some mammals, such as voles and muskrats, have a similar count across all communities. Not only does species richness appear to vary across the different plant communities, but it appears that some mammals have a clear preference for some communities over others.\n\n\n\n\n\nColumn plot showing relationship between plant community and average species richness.\n\n\n\n\n\n\n\n\n\nColumn plot showing relationship of number of observed mammals across plant communities."
+  },
+  {
+    "objectID": "stat210_project.html#temperature",
+    "href": "stat210_project.html#temperature",
+    "title": "STAT 210 Coding Project",
+    "section": "Temperature",
+    "text": "Temperature\nThe first graphic shows that as the daily temperature increases the average species richness decreases. However, when looking at the graphic, it appears there is a flat section where average species richness does not change from about -15 to 0 degrees before the average richness drops back off. The second graphic shows how each individual mammal counts vary across daily temperature. Some mammals, such as foxes and hares, have an arced pattern. Some mammals, such as shrews and ravens, have a similar counts across the daily temperatures. This arced pattern implies that there is an ideal temperature that is not too warm or too cold for certain mammals to be active in winter. However, some mammals seem to have no preference in temperature as their count remained constant over all the recorded daily temperatures.\n\n\n\n\n\nScatterplot showing relationship between daily temperature, in Celsius, and average species richness.\n\n\n\n\n\n\n\n\n\nScatterplot showing relationship of number of observed mammals across daily temperatures."
+  },
+  {
+    "objectID": "stat210_project.html#time-period",
+    "href": "stat210_project.html#time-period",
+    "title": "STAT 210 Coding Project",
+    "section": "Time Period",
+    "text": "Time Period\nThe first graphic shows that as winter progresses the average species richness increases. Early winter had an average species richness of about 0.75. Late winter had an average species richness of about 0.85. The second graphic shows how each individual mammal counts varies as winter progresses. Some mammals, such as coyotes and fishers, have visually higher counts at certain time periods compared to others. Some mammals, such as wolverines and moles, have a similar count across winter. Not only does species richness appear to increase as winter progresses, but it appears that some mammals have a clear preference for certain periods of winter while others are observed consistently throughout winter.\n\n\n\n\n\nColumn chart showing relationship between time period and average species richness.\n\n\n\n\n\n\n\n\n\nColumn chart showing relationship of number of observed mammals across time periods."
   }
 ]

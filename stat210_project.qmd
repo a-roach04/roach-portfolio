@@ -1,0 +1,208 @@
+---
+title: "STAT 210 Coding Project"
+---
+
+## Data Description
+
+For this project, I used a dataset looking at mammal abundance in Prince Albert National Park in Canada. The data was collected using seven snow transects. After 48 hours, the tracks left by mammals were recorded every 100 meters. The transects were refreshed either by fresh snowfall or by a drag pulled by a snowmobile. There are a lot of variables included, but the most important ones for my research questions are period which is recorded as a character, month, day, and year which are recorded as integers, cloudcover which is an integer, precipitation which is a character, temperature which is an integer, and plant community which is a character. Each species is listed as a variable with their presence recorded at a one and their absence recorded as a zero. Some research questions I want to answer are how does species abundance vary over time, over temperature, and over different plant communities?
+
+## Data Cleaning
+
+In order to answer these research questions, the data has to be edited to make visualization easier. First, I selected only the variables I am interested in. Then, since values considered N/A were not recognized by R, I had to reassign the missing values so that R could understand those values were missing. Next, I reassigned the types of variables recorded to ensure that words were being interpreted by R as words and that numbers were being interpreted by R as numbers. The final step to clean this data was rotating the data so that each row contained the information for a singular observation rather than multiple. This makes visualization much easier!
+
+## Plant Communities
+
+The first graphic shows that there is some variation in average species richness between the different plant communities. Tamarack bog was the least diverse with an average species richness of about 0.5. Dry grassland was the most diverse with an average species richness of about 0.95. The second graphic shows how each individual mammal counts vary across the plant communities. Some mammals, such as deer and wolves, have visually higher counts in certain communities compared to others. Some mammals, such as voles and muskrats, have a similar count across all communities. Not only does species richness appear to vary across the different plant communities, but it appears that some mammals have a clear preference for some communities over others.
+
+```{r}
+#| label: plant-community-overall-graphics
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+#| fig-cap: "Column plot showing relationship between plant community and average species richness."
+#| fig-alt: "Column plot showing relationship between plant community and average species richness. Tamarack bog was the least diverse with an average species richness of about 0.5. Dry grassland was the most diverse with an average species richness of about 0.95."
+
+library(tidyverse) #load necessary package
+mammal_clean <- read_csv("data/clean/mammal_clean.csv") #read in data
+
+mammal_clean |> #use mammal_clean data
+  select(plantcomm, richness) |> #select these variables
+  group_by(plantcomm) |> #group by plant community
+  summarise(rich_avg = mean(richness, na.rm = TRUE)) |> #summarize the average species richness
+  ggplot() + #make a plot
+  geom_col(mapping = aes(x = fct_reorder(plantcomm, rich_avg), #make a column plot with plant comm on the x
+                         y = rich_avg), #average richness on the y
+                         fill = "forestgreen", #fill the bars with forest green color
+                         color = "darkgreen") + #outline the bars with dark green color
+  labs(x = "Plant community in Prince Albert National Park, Canada", #label for x axis
+       y = "Average species richness",#label for y axis
+       title = "Relationship Between Plant Community and Average Species Richness") + #label for title
+  scale_x_discrete(labels=c("cp" = "Conifer - Pine", #cp is conifer pine
+                            "cs" = "Conifer - Spruce", #cs is conifer spruce
+                            "da" = "Deciduous - Aspen", #da is deciduous aspen 
+                            "dg" = "Dry Grassland", #dg is dry grassland
+                            "fen" = "Tamarack Bog", #fen is tamarack bog
+                            "mw" = "Mixed Wood", #mw is mixed wood
+                            "rip" = "Riparian", #rip is riparian
+                            "wg" = "Wet Grassland")) + #wg is wet grassland
+  theme(axis.text.x = element_text(size = 8, angle = 8))  #angle the x axis text and make it smaller      
+```
+
+```{r}
+#| label: plant-community-species-graphics
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+#| fig-cap: "Column plot showing relationship of number of observed mammals across plant communities."
+#| fig-alt: "Column plot showing relationship of number of observed mammals across plant communities. Some mammals have clear preferences as shown in the higher count in some plant communities while other mammals have relatively even counts across plant communities."
+#| fig-height: 10
+#| fig-width: 15
+
+mammal_clean |> #use this data
+  select(plantcomm, deer, moose, elk, wolf, coyote, fox, caribou, lynx, fisher, marten, bison, mink, otter, grouse, hare, weasel, ermine, mouse, raven, squirrel, wolverine, muskrat, mole, shrew, vole, other) |> #select these variables
+  pivot_longer(cols = 2:27, names_to = "mammal",#use mammal as the variable name
+               values_to = "presence") |> #use presence for the values under mammal
+  group_by(mammal, plantcomm) |> #group by mammal and plant community
+  tally(presence) |> #count the presence of each mammal in each community
+  ggplot() + #make a plot
+  geom_col(mapping = aes(x = plantcomm, #make a column chart with plant community on the x
+                         y = n), #count on the y
+           fill = "forestgreen",#fill the bars with forest green color
+           color = "darkgreen") + #outline the bars with dark green color
+  facet_wrap(~mammal) + #put each mammal in its own graphic
+  labs(x = "Plant community in Prince Albert National Park, Canada", #label for the x axis
+       y = "Number of Each Species' Occurances", #label for the y axis
+       title = "Relationship of Number of Observed Mammals Across Plant Communities") + # label for the title
+  theme(axis.title.x = element_text(size = 20)) + #make the x label text larger
+  theme(axis.title.y = element_text(size = 20)) + #make the y label text larger
+  theme(title = element_text(size = 25)) #make the title text larger
+
+```
+
+## Temperature
+
+The first graphic shows that as the daily temperature increases the average species richness decreases. However, when looking at the graphic, it appears there is a flat section where average species richness does not change from about -15 to 0 degrees before the average richness drops back off. The second graphic shows how each individual mammal counts vary across daily temperature. Some mammals, such as foxes and hares, have an arced pattern. Some mammals, such as shrews and ravens, have a similar counts across the daily temperatures. This arced pattern implies that there is an ideal temperature that is not too warm or too cold for certain mammals to be active in winter. However, some mammals seem to have no preference in temperature as their count remained constant over all the recorded daily temperatures.
+
+```{r}
+#| label: temperature-overall-graphics
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+#| fig-cap: "Scatterplot showing relationship between daily temperature, in Celsius, and average species richness."
+#| fig-alt: "Scatterplot showing relationship between daily temperature, in Celsius, and average species richness. As daily temperature increases, average species richness decreases."
+
+mammal_clean |> #use this dataset
+  select(temp, richness) |> #select these variables
+  group_by(temp) |> #group by temperature
+  summarise(rich_avg = mean(richness, na.rm = TRUE)) |> #summarize the average species richness
+  ggplot() + #make a plot
+  geom_point(mapping = aes(x = temp, #make a scatterplot plot with temp on the x axis
+                         y = rich_avg), #average richness on the y axis
+           color = "skyblue3") +  #color the points with sky blue 3
+  labs(x = "Daily temperature, in Celsius, in Prince Albert National Park", #label the x axis
+       y = "Average species richness",#label the y axis
+       title = "Relationship Between Daily Temperature, in Celsius, and Average Species Richness") + #label the title
+  geom_smooth(method = NULL, #create a trendline
+              mapping = aes(x = temp, #use temp for the x
+                         y = rich_avg), #use average richness for the y
+              color = "skyblue4", #make the trendline sky blue 4 color
+              linetype = "solid", #make the trendline solid
+              se = FALSE) #no error space surrounding trendline
+
+```
+
+```{r}
+#| label: temperature-species-graphics
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+#| fig-cap: "Scatterplot showing relationship of number of observed mammals across daily temperatures."
+#| fig-alt: "Column plot showing relationship of number of observed mammals across daily temperatures. Some mammals have clear preferences as shown in the higher count during certain temperatures while other mammals have relatively even counts across temperature."
+#| fig-height: 10
+#| fig-width: 15
+
+mammal_clean |> #use this data
+  select(temp, deer, moose, elk, wolf, coyote, fox, caribou, lynx, fisher, marten, bison, mink, otter, grouse, hare, weasel, ermine, mouse, raven, squirrel, wolverine, muskrat, mole, shrew, vole, other) |> #select these variables
+  pivot_longer(cols = 2:27, names_to = "mammal", #use mammal as the variable name
+               values_to = "presence") |> #use presence for the values under mammal
+  group_by(mammal, temp) |> #group by mammal and temp
+  tally(presence) |> #count the presence of each mammal in each community
+  ggplot() + #make a plot
+  geom_point(mapping = aes(x = temp, #make a scatterplot with temp on the x axis
+                         y = n), #count on the y axis
+           color = "skyblue3") + #color the points sky blue 3 
+  facet_wrap(~mammal) + #put each mammal in its own graphic
+  labs(x = "Daily temperature, in Celsius, in Prince Albert National Park, Canada", #label the x axis 
+       y = "Number of Each Species' Occurances", #label the y axis
+       title = "Relationship of Number of Observed Mammals Across Daily Temperatures") + #label the title
+  theme(axis.title.x = element_text(size = 20)) + #make the x label text larger
+  theme(axis.title.y = element_text(size = 20)) + #make the y label text larger
+  theme(title = element_text(size = 25)) + #make the title text larger
+  geom_smooth(method = NULL, #create a trendline for each mammal
+              mapping = aes(x = temp, #use temp at the x
+                         y = n), #use count as the y
+              color = "skyblue4", #color the trendline sky blue 4
+              linetype = "solid", #make the trendline solid
+              se = FALSE) #no error space around trendline
+
+```
+
+## Time Period
+
+The first graphic shows that as winter progresses the average species richness increases. Early winter had an average species richness of about 0.75. Late winter had an average species richness of about 0.85. The second graphic shows how each individual mammal counts varies as winter progresses. Some mammals, such as coyotes and fishers, have visually higher counts at certain time periods compared to others. Some mammals, such as wolverines and moles, have a similar count across winter. Not only does species richness appear to increase as winter progresses, but it appears that some mammals have a clear preference for certain periods of winter while others are observed consistently throughout winter.
+
+```{r}
+#| label: period-overall-graphics
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+#| fig-cap: "Column chart showing relationship between time period and average species richness."
+#| fig-alt: "Column chart showing relationship between time period and average species richness. Early winter had the lowest average species richness of about 0.75. Late winter had the highest average species richness of about 0.85."
+
+mammal_clean |> #use this data
+  select(periodnum, richness) |> #select these variables
+  group_by(periodnum) |> #group by time period
+  summarise(rich_avg = mean(richness, na.rm = TRUE)) |> #summarize the average species richness
+  ggplot() + #make a plot
+  geom_col(mapping = aes(x = factor(periodnum), #make a column chart with time period on the x axis
+                         y = rich_avg), #average richness on the y axis
+                         fill = "slategray2", #color the columns slate grey 2
+                         color = "slategray4") + #outline the columns slate grey 4
+  labs(x = "Time Period", #label the x axis
+       y = "Average species richness in Prince Albert National Park", #label the y axis
+       title = "Relationship Between Time Period and Average Species Richness") + #label the title
+  scale_x_discrete(labels = c("1" = "December to mid-January", #time period 1 represents early winter
+                            "2" = "Mid-January to mid-February", #time period 2 represents mid winter
+                            "3" = "Mid February to end of winter"))    #time period 3 represents late winter     
+
+```
+
+```{r}
+#| label: period-species-graphics
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+#| fig-cap: "Column chart showing relationship of number of observed mammals across time periods."
+#| fig-alt: "Column chart showing relationship of number of observed mammals across time periods. Some mammals have clear preferences as shown in the higher count during certain time periods while other mammals have relatively even counts across winter."
+#| fig-height: 10
+#| fig-width: 15
+
+mammal_clean |> #use this data
+  select(periodnum, deer, moose, elk, wolf, coyote, fox, caribou, lynx, fisher, marten, bison, mink, otter, grouse, hare, weasel, ermine, mouse, raven, squirrel, wolverine, muskrat, mole, shrew, vole, other) |> #select these variables
+  pivot_longer(cols = 2:27, names_to = "mammal",#use mammal as the variable name
+               values_to = "presence") |> #use presence for the values under mammal
+  group_by(mammal, periodnum) |> #group by mammal and time period
+  tally(presence) |> #count the the presence of each mammal at each time period
+  ggplot() + #make a plot
+  geom_col(mapping = aes(x = periodnum, #make a column plot with time period on the x axis
+                         y = n), #count on the y axis
+           fill = "slategray2", #color the columns slate grey 2
+           color = "slategray4") + #outline the columns slate grey 4
+  facet_wrap(~mammal) + #put each mammal in its own graphic
+  labs(x = "Time Period", #label the x axis
+       y = "Number of Each Species' Occurances in Prince Albert National Park", #label the y axis
+       title = "Relationship of Number of Observed Mammals Across Time Periods") + #label the title
+  theme(axis.title.x = element_text(size = 20)) + #make the x label text larger
+  theme(axis.title.y = element_text(size = 20)) + #make the y label text larger
+  theme(title = element_text(size = 25)) #make the title text larger
+```

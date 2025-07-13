@@ -10,6 +10,8 @@ website:
         text: "Home"
       - href: about.qmd
         text: "About Me"
+      - href: stat210_project.qmd
+        text: "STAT 210 Project"
       - href: posters.qmd
         text: "Posters"
       - text: "Papers"
