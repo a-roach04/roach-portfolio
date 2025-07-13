@@ -10,7 +10,14 @@ website:
         text: "Home"
       - href: about.qmd
         text: "About Me"
-
+      - href: posters.qmd
+        text: "Posters"
+      - text: "Papers"
+        menu: 
+        - href: case_study.qmd
+        - text: " Ringtail Case Study"
+        - href: urchin.qmd
+        - text: "Purple Urchin Experiment"
 format:
   html:
     theme: Superhero
