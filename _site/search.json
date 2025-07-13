@@ -2,15 +2,29 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "My name is Aiden Roach and I am studying biology, statistics, and environmental science at California State University of Monterey Bay. After undergraduate school, I want to go to graduate school for a Ph.D. in ecology or population biology. For my career, I want to study the migration patterns of large mammals to make urban development friendlier towards our animal neighbors. Whenever I have free time, I like to go tidepooling, crochet, and watch romance movies with my cat Moose.\n\n\n\nSometimes, Moose helps me with my coding. He’s a smart boy."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "roach-portfolio",
+    "title": "Aiden Roach",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Aiden Roach is a student at California State University, Monterey Bay majoring in biology and double minoring in statistics and environmental science."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Aiden Roach",
+    "section": "Education",
+    "text": "Education\nCalifornia State University, Monterey Bay | Seaside, CA | B.S. in Biology | 2022 - 2026"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Aiden Roach",
+    "section": "Experience",
+    "text": "Experience\nCooperative Learning Center | Front Desk Assistant | December 2022 - present\nDepartment of Mathematics and Statistics | Instructional Student Assistant | November 2023 - present\nCalifornia Marina State Beach | Volunteer | February 2025 - May 2025\nSan Diego Zoo Wildlife Alliance | Volunteer | May 2025 - August 2025"
   }
 ]
