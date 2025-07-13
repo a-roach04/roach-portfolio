@@ -15,9 +15,8 @@ website:
       - text: "Papers"
         menu: 
         - href: case_study.qmd
-        - text: " Ringtail Case Study"
         - href: urchin.qmd
-        - text: "Purple Urchin Experiment"
+        - href: gis.qmd
 format:
   html:
     theme: Superhero
