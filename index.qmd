@@ -1,11 +1,22 @@
 ---
-title: "roach-portfolio"
+title: "Aiden Roach"
+about:
+  template: jolla
+  image: profile.jpeg
 ---
 
-This is a Quarto website.
+Aiden Roach is a student at California State University, Monterey Bay majoring in biology and double minoring in statistics and environmental science.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Education
 
-```{r}
-1 + 1
-```
+California State University, Monterey Bay \| Seaside, CA \| B.S. in Biology \| 2022 - 2026
+
+## Experience
+
+Cooperative Learning Center \| Front Desk Assistant \| December 2022 - present
+
+Department of Mathematics and Statistics \| Instructional Student Assistant \| November 2023 - present
+
+California Marina State Beach \| Volunteer \| February 2025 - May 2025
+
+San Diego Zoo Wildlife Alliance \| Volunteer \| May 2025 - August 2025
