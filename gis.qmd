@@ -2,68 +2,66 @@
 title: "Woodrat Habitat Analysis"
 ---
 
-# Conditions in University of Santa Cruz’s Fort Ord Nature Reserve for Woodrat Nests      
+# Conditions in University of Santa Cruz’s Fort Ord Nature Reserve for Woodrat Nests
 
-## Aiden Roach      
+## Aiden Roach
 
-## May 13, 2025      
+## May 13, 2025
 
-# Introduction       
+# Introduction
 
-### Background       
+### Background
 
-The Dusky-footed woodrat (Neotoma fuscipes) is best known for their large nests. These houses are built of sticks, twigs, and small tree limbs and contain multiple compartments to store food, rest, and raise their young (English 1923 and Laudenslayer, Fargo 1999). The subspecies can be found from San Francisco to San Luis Obisbo, mainly along the Santa Lucia mountain range (Vestal 1938). Another notable characteristic of the dusky-footed woodrat is their social dynamics. The woodrats form communities and share nests frequently. Home ranges of a single woodrat typically overlap with other woodrats regardless of sex. In the nest, one male typically shares a nest with multiple females (Innes, Vuren, Kelt, Johnson, Wilson, Stine 2007).        
-	
+The Dusky-footed woodrat (Neotoma fuscipes) is best known for their large nests. These houses are built of sticks, twigs, and small tree limbs and contain multiple compartments to store food, rest, and raise their young (English 1923 and Laudenslayer, Fargo 1999). The subspecies can be found from San Francisco to San Luis Obisbo, mainly along the Santa Lucia mountain range (Vestal 1938). Another notable characteristic of the dusky-footed woodrat is their social dynamics. The woodrats form communities and share nests frequently. Home ranges of a single woodrat typically overlap with other woodrats regardless of sex. In the nest, one male typically shares a nest with multiple females (Innes, Vuren, Kelt, Johnson, Wilson, Stine 2007).
 
-### Objectives          
+### Objectives
 
 The broadness of the data collected allows for many research questions to be explored. Four research questions were focused on for this report. Is there a relationship between the number of woodrat nests observed and the habitat? Is there a relationship between nest size and vegetation size within the two habitats of interest? And, when considering vegetation type and canopy cover, what portion of the northern section of University of Santa Cruz’s Fort Ord Nature Reserve contains ideal conditions for woodrats?
 
-# Methods         
+# Methods
 
-### Data Collection         
+### Data Collection
 
-At the northern section of University of Santa Cruz’s Fort Ord Nature Reserve, 30 random points were selected within the oak woodland habitat and 30 random points within the coastal scrubland habitat. These habitats were chosen to determine if there was a preference in nest location based on habitat type. At each point, a three meter radius was measured with the point as the center. Each nest within the radius was measured using a small, medium, or large scale. The type of vegetation the nest was under and the size of the vegetation was recorded, also using a subjective small, medium, or large scale. The sizing scale was used for a quick and efficient data collection process due to the time constraint. 
+At the northern section of University of Santa Cruz’s Fort Ord Nature Reserve, 30 random points were selected within the oak woodland habitat and 30 random points within the coastal scrubland habitat. These habitats were chosen to determine if there was a preference in nest location based on habitat type. At each point, a three meter radius was measured with the point as the center. Each nest within the radius was measured using a small, medium, or large scale. The type of vegetation the nest was under and the size of the vegetation was recorded, also using a subjective small, medium, or large scale. The sizing scale was used for a quick and efficient data collection process due to the time constraint.
 
-### Statistical Analysis         
+### Statistical Analysis
 
-In R Studio, a parametric Chi- Square test was used to test the null hypothesis that there is no association between the habitat type, either oak woodland or coastal scrubland, and the size of the woodrat nest. While the random sample and independence conditions were met, a permuted Chi-Square test was used to test the two null hypotheses that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the oak woodland habitat and that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the coastal scrubland habitat due to the sample size condition being violated in both habitats. R Studio was also used to produce bar charts providing a visual representation of the observed relationship stated in all three hypotheses. In ArcGIS Pro, spatial analysis was conducted using Boolean rasters of  canopy cover and vegetation type. Each raster was reclassified based on the presence/absence of woodrat nests then overlaid with each other to determine possible locations of woodrat nests within the northern section of the reserve. 
+In R Studio, a parametric Chi- Square test was used to test the null hypothesis that there is no association between the habitat type, either oak woodland or coastal scrubland, and the size of the woodrat nest. While the random sample and independence conditions were met, a permuted Chi-Square test was used to test the two null hypotheses that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the oak woodland habitat and that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the coastal scrubland habitat due to the sample size condition being violated in both habitats. R Studio was also used to produce bar charts providing a visual representation of the observed relationship stated in all three hypotheses. In ArcGIS Pro, spatial analysis was conducted using Boolean rasters of canopy cover and vegetation type. Each raster was reclassified based on the presence/absence of woodrat nests then overlaid with each other to determine possible locations of woodrat nests within the northern section of the reserve.
 
-# Results          
+# Results
 
-### Hypothesis Testing          
+### Hypothesis Testing
 
-The results of the parametric and nonparametric Chi-Square tests produced interesting results. We have strong evidence against our null hypothesis that there is no association between the habitat type, either oak woodland or coastal scrubland, and the size of the woodrat nest (α = 0.05, χ2 = 9.8507, df = 3, p-value = 0.01988). This is supported by the bar chart in Figure 1, which shows that the oak woodland habitat had a higher proportion of small nest size compared to the other two nest sizes while the coastal scrubland had a higher proportion of no nests overall.          
+The results of the parametric and nonparametric Chi-Square tests produced interesting results. We have strong evidence against our null hypothesis that there is no association between the habitat type, either oak woodland or coastal scrubland, and the size of the woodrat nest (α = 0.05, χ2 = 9.8507, df = 3, p-value = 0.01988). This is supported by the bar chart in Figure 1, which shows that the oak woodland habitat had a higher proportion of small nest size compared to the other two nest sizes while the coastal scrubland had a higher proportion of no nests overall.
 
-When looking at the individual habitats, we found very weak evidence against our null hypothesis that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the oak woodland habitat (α = 0.05, χ2  = 1.330694, p-value = 0.8757) and very weak evidence against our null hypothesis that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the coastal scrubland habitat (α = 0.05, χ2  = 3.569524, p-value = 0.5495). These results contradict the bar charts in Figure 2 and Figure 3. Figure 2 shows that there is some variation in nest size based on tree size within the oak woodland while Figure 3 shows the same relationship in the coastal scrubland. A possible explanation for this difference is the low power calculated. While a power of 0.8 was desired, using R Studio, a power of 0.0669 for the oak woodland subset and 0.0580 for the coastal scrubland was calculated given the sample sizes of 33 and 16 respectively.
+When looking at the individual habitats, we found very weak evidence against our null hypothesis that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the oak woodland habitat (α = 0.05, χ2 = 1.330694, p-value = 0.8757) and very weak evidence against our null hypothesis that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the coastal scrubland habitat (α = 0.05, χ2 = 3.569524, p-value = 0.5495). These results contradict the bar charts in Figure 2 and Figure 3. Figure 2 shows that there is some variation in nest size based on tree size within the oak woodland while Figure 3 shows the same relationship in the coastal scrubland. A possible explanation for this difference is the low power calculated. While a power of 0.8 was desired, using R Studio, a power of 0.0669 for the oak woodland subset and 0.0580 for the coastal scrubland was calculated given the sample sizes of 33 and 16 respectively.
 
-### Spatial Analysis          
+### Spatial Analysis
 
 The spatial analysis showed that the canopy cover had little effect on reducing the possible locations for woodrat nests, making vegetation type the biggest factor. Using the reclassify tool in ArcGIS Pro, it was shown that canopy cover of 50% or greater and vegetation types other than general woodland and shrubland were not ideal locations for woodrat nests. Both the vegetation type and canopy cover rasters were then overlaid with each other using the raster calculator tool to produce the overall ideal habitat area for woodrats within the reserve as shown in Figure 4. The layout shown in Figure 4 has images showing the areas that match the canopy cover condition in yellow, the areas that match the vegetation condition in blue, as well as the areas that meet both the canopy cover and vegetation conditions in green.
 
-# Discussion        
+# Discussion
 
-Overall, the habitat type does have an effect on whether woodrat nests were observed or not. However the size of the vegetation has no relationship with the size of the woodrat nest, although the low power suggests that we were simply unable to detect a true alternative. While the broadness of the dataset allowed for efficient data collection, there are some areas that could be improved. Further studies should consider the southern boundary of University of Santa Cruz’s Fort Ord Nature Reserve in addition to the northern boundary to increase the power of the study. Another area for improvement is taking more detailed data, such as measuring each nest and the vegetation, considering other factors in habitat such as slope, or using thermal sensors to determine if the nest is being actively used or not (Payne, Wade, Hartley, Shemmings-Payne. 2023). These gaps in understanding could be considered a weakness in the study; however, this study provided a foundation of basic woodrat ecology for further studies to build upon.           
+Overall, the habitat type does have an effect on whether woodrat nests were observed or not. However the size of the vegetation has no relationship with the size of the woodrat nest, although the low power suggests that we were simply unable to detect a true alternative. While the broadness of the dataset allowed for efficient data collection, there are some areas that could be improved. Further studies should consider the southern boundary of University of Santa Cruz’s Fort Ord Nature Reserve in addition to the northern boundary to increase the power of the study. Another area for improvement is taking more detailed data, such as measuring each nest and the vegetation, considering other factors in habitat such as slope, or using thermal sensors to determine if the nest is being actively used or not (Payne, Wade, Hartley, Shemmings-Payne. 2023). These gaps in understanding could be considered a weakness in the study; however, this study provided a foundation of basic woodrat ecology for further studies to build upon.
 
-# References       
+# References
 
-English PF. 1923. The Dusky-Footed Wood Rat (Neotoma fuscipes). Journal of Mammalogy. 4(1):1–1          
+English PF. 1923. The Dusky-Footed Wood Rat (Neotoma fuscipes). Journal of Mammalogy. 4(1):1–1
 
-Innes RJ, Vuren DHV, Kelt DA, Johnson ML, Wilson JA, Stine PA. 2007. Habitat Associations of Dusky-footed Woodrats (Neotoma fuscipes) in Mixed-conifer Forest of the Northern Sierra Nevada. Journal of Mammalogy. 88(6):1523–1531.        
+Innes RJ, Vuren DHV, Kelt DA, Johnson ML, Wilson JA, Stine PA. 2007. Habitat Associations of Dusky-footed Woodrats (Neotoma fuscipes) in Mixed-conifer Forest of the Northern Sierra Nevada. Journal of Mammalogy. 88(6):1523–1531.
 
-Laudenslayer WF, Fargo R. 1999. Are house counts reliable estimators of dusky-footed woodrat population size? Transactions of the Western Section of the Wildlife Society. 35:71–75.    
+Laudenslayer WF, Fargo R. 1999. Are house counts reliable estimators of dusky-footed woodrat population size? Transactions of the Western Section of the Wildlife Society. 35:71–75.
 
-Payne W, Wade D, Hartley I, Shemmings-Payne J. 2023 Jan 9. An evaluation of thermal imaging as a tool for assessing occupancy of enclosed nests. Ringing & Migration.:1–11.         doi:https://doi.org/10.1080/03078698.2022.2160788.      
+Payne W, Wade D, Hartley I, Shemmings-Payne J. 2023 Jan 9. An evaluation of thermal imaging as a tool for assessing occupancy of enclosed nests. Ringing & Migration.:1–11. doi:https://doi.org/10.1080/03078698.2022.2160788.
 
-Vestal EH. 1938. Biotic Relations of the Wood Rat (Neotoma fuscipes) in the Berkeley Hills. Journal of Mammalogy. 19(1):1–1     
-
+Vestal EH. 1938. Biotic Relations of the Wood Rat (Neotoma fuscipes) in the Berkeley Hills. Journal of Mammalogy. 19(1):1–1
 
 # Figures
 
-![Figure 1. Bar chart showing the relationship between the nest size in meters and the proportion of observed nests based on habitat type.](figures/woodrat/woodrat_fig1.jpg)           
+![Figure 1. Bar chart showing the relationship between the nest size in meters and the proportion of observed nests based on habitat type.](figures/woodrat/woodrat_fig1.jpg)
 
-![Figure 2. Bar chart showing the relationship between the nest size in meters and the proportion of observed nests within the oak woodland based on vegetation size.](figures/woodrat/woodrat_fig2.jpg)         
+![Figure 2. Bar chart showing the relationship between the nest size in meters and the proportion of observed nests within the oak woodland based on vegetation size.](figures/woodrat/woodrat_fig2.jpg)
 
-![Figure 3.  Bar chart showing the relationship between the nest size in meters and the proportion of observed nests within the coastal scrubland based on vegetation size.](figures/woodrat/woodrat_fig3.jpg)        
+![Figure 3. Bar chart showing the relationship between the nest size in meters and the proportion of observed nests within the coastal scrubland based on vegetation size.](figures/woodrat/woodrat_fig3.jpg)
 
-![Figure 4.  Layout created in ArcGIS Pro showing the potential locations of woodrat nests based on canopy cover and vegetation type.](figures/woodrat/woodrat_fig4.jpg)
+![Figure 4. Layout created in ArcGIS Pro showing the potential locations of woodrat nests based on canopy cover and vegetation type.](figures/woodrat/woodrat_fig4.jpg)
