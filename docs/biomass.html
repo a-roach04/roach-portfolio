@@ -244,14 +244,14 @@ window.Quarto = {
 </section>
 <section id="statistical-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h3>
-<p>A scatterplot with the measured diameter plotted on the x-axis, the estimated heights plotted on the y-axis, and the size class of the Monterey pine represented by color will be generated using the ggplot package in R. A linear model will be created for each size class using the lm function from base R. Graphics exploring the assumptions for each linear model will be created using the plot function which is also included in base R. Finally, a power analysis of each linear model will be calculated using the pwr.f2.test in the pwr package. The effect size for each power test will be calculated using the equation established in Cohen 1988: <span class="math inline">\(f2 = R^2/ 1-R^2\)</span></p>
+<p>A scatterplot with the measured diameter plotted on the x-axis, the estimated heights plotted on the y-axis, and the size class of the Monterey pine represented by color will be generated using the ggplot package in R. A linear model will be created for each size class using the lm function from base R. Graphics exploring the assumptions for each linear model will be created using the plot function which is also included in base R. Finally, a power analysis of each linear model will be calculated using the pwr.f2.test in the pwr package. The effect size for each power test will be calculated using the equation established in Cohen 1988: f2 = R2/ 1-R2</p>
 </section>
 </section>
 <section id="results" class="level1">
 <h1>Results</h1>
 <section id="exploratory-data-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h3>
-<p>Multiple transformations were considered, but ultimately no transformation was chosen for the high correlation values. A table of each transformation and their correlations can be found in Table 1. A scatterplot of measured diameter, calculated height, and size class can be found in Figure 2. Looking at the scatterplot, there is a lot of variation in the large size class. This is supported by the <span class="math inline">\(R^2\)</span> value of 0.03532 which means only 3.532% of the variation can be explained by the model of calculated height and measured diameter of large Monterey pine. However there is less variation for the small and medium size classes. This is supported by the <span class="math inline">\(R^2\)</span> values of 0.673 for the small size class and 0.5234 for the medium size class. This means 67.3% of the variation can be explained by the model of calculated height and measured diameter of small Monterey pine and 52.34% of the variation can be explained by the model of calculated height and measured diameter of medium Monterey pine.</p>
+<p>Multiple transformations were considered, but ultimately no transformation was chosen for the high correlation values. A table of each transformation and their correlations can be found in Table 1. A scatterplot of measured diameter, calculated height, and size class can be found in Figure 2. Looking at the scatterplot, there is a lot of variation in the large size class. This is supported by the R2 value of 0.03532 which means only 3.532% of the variation can be explained by the model of calculated height and measured diameter of large Monterey pine. However there is less variation for the small and medium size classes. This is supported by the R2 values of 0.673 for the small size class and 0.5234 for the medium size class. This means 67.3% of the variation can be explained by the model of calculated height and measured diameter of small Monterey pine and 52.34% of the variation can be explained by the model of calculated height and measured diameter of medium Monterey pine.</p>
 </section>
 <section id="hypothesis-testing" class="level3">
 <h3 class="anchored" data-anchor-id="hypothesis-testing">Hypothesis Testing</h3>
@@ -354,36 +354,11 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/biomass/biomass-fig1.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 1. Study site, highlighted in red, at Veteran’s Park in Monterey, California.</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/biomass/biomass-fig2.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 2. Scatterplot showing the relationship of measured diameter, estimated height, and size class.</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/biomass/biomass-fig3.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 3. Diagnostic plots for the large size class linear model.</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/biomass/biomass-fig4.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 4. Diagnostic plots for the medium size class linear model.</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/biomass/biomass-fig5.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 5. Diagnostic plots for the small size class linear model.</figcaption>
-</figure>
-</div>
+<p>[Figure 1. Study site, highlighted in red, at Veteran’s Park in Monterey, California.]!(figures/biomass/biomass-fig1.jpg)</p>
+<p>[Figure 2. Scatterplot showing the relationship of measured diameter, estimated height, and size class.]!(figures/biomass/biomass-fig2.png)</p>
+<p>[Figure 3. Diagnostic plots for the large size class linear model.]!(figures/biomass/biomass-fig3.png)</p>
+<p>[Figure 4. Diagnostic plots for the medium size class linear model.]!(figures/biomass/biomass-fig4.png)</p>
+<p>[Figure 5. Diagnostic plots for the small size class linear model.]!(figures/biomass/biomass-fig5.png)</p>
 </section>
 </section>
 <section id="references" class="level1">
