@@ -2,7 +2,8 @@
 title: "Biomass Methodology"
 ---
 
-# Exploring the Relationship Between Measured Diameter and Estimated Height of Pinus radiata Based on Size Class
+# Exploring the Relationship Between Measured Diameter and Estimated Height of *Pinus radiata* Based on Size Class     
+
 ## Aiden Roach
 
 # Introduction
