@@ -19,6 +19,7 @@ website:
         - href: case_study.qmd
         - href: urchin.qmd
         - href: gis.qmd
+        - href: biomass.qmd
 format:
   html:
     theme: Superhero

@@ -46,7 +46,7 @@ Based on the descriptive statistics, there appears to be a difference in purple 
 
 ### Analysis
 
-We found very strong evidence that there is a relationship between the number of purple urchins observed and the tide level given the location remains constant based on our test statistic F of 8.9475, dftreatment of 1, dfresidual of 83, p-value of 0.0036571, and α of 0.05. We also found very strong evidence that there is a relationship between the number of purple urchins observed and the location given the tide level remains constant based on our test statistic F of 7.5876, dftreatment of 3, dfresidual of 83, p-value of 0.0001518, and α of 0.05. This result is supported by Figure 3, which shows locations at low tide having a higher purple urchin count compared to the same location at high tide.
+We found very strong evidence that there is a relationship between the number of purple urchins observed and the tide level given the location remains constant based on our test statistic F of 8.9475, $df_{treatment}$ of 1, $df_{residual}$ of 83, p-value of 0.0036571, and α of 0.05. We also found very strong evidence that there is a relationship between the number of purple urchins observed and the location given the tide level remains constant based on our test statistic F of 7.5876, $df_{treatment}$ of 3, $df_{residual}$ of 83, p-value of 0.0001518, and α of 0.05. This result is supported by Figure 3, which shows locations at low tide having a higher purple urchin count compared to the same location at high tide.
 
 # Discussion
 

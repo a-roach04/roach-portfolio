@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About Me – Aiden Roach’s Portfolio</title>
+<title>biomass – Aiden Roach’s Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -94,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
@@ -139,15 +168,45 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#exploring-the-relationship-between-measured-diameter-and-estimated-height-of-pinus-radiata-based-on-size-class" id="toc-exploring-the-relationship-between-measured-diameter-and-estimated-height-of-pinus-radiata-based-on-size-class" class="nav-link active" data-scroll-target="#exploring-the-relationship-between-measured-diameter-and-estimated-height-of-pinus-radiata-based-on-size-class">Exploring the Relationship Between Measured Diameter and Estimated Height of Pinus radiata Based on Size Class</a>
+  <ul class="collapse">
+  <li><a href="#aiden-roach" id="toc-aiden-roach" class="nav-link" data-scroll-target="#aiden-roach">Aiden Roach</a></li>
+  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  </ul></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <ul class="collapse">
+  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection">Data Collection</a></li>
+  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis">Statistical Analysis</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">Exploratory Data Analysis</a></li>
+  <li><a href="#hypothesis-testing" id="toc-hypothesis-testing" class="nav-link" data-scroll-target="#hypothesis-testing">Hypothesis Testing</a></li>
+  </ul></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#figures-and-tables" id="toc-figures-and-tables" class="nav-link" data-scroll-target="#figures-and-tables">Figures and Tables</a>
+  <ul class="collapse">
+  <li><a href="#table-1.-correlation-values-of-each-transformation-given-size-class." id="toc-table-1.-correlation-values-of-each-transformation-given-size-class." class="nav-link" data-scroll-target="#table-1.-correlation-values-of-each-transformation-given-size-class.">Table 1. Correlation values of each transformation given size class.</a></li>
+  <li><a href="#table-2.-results-of-each-linear-model" id="toc-table-2.-results-of-each-linear-model" class="nav-link" data-scroll-target="#table-2.-results-of-each-linear-model">Table 2. Results of each linear model</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About Me</h1>
+<h1 class="title">biomass</h1>
 </div>
 
 
@@ -164,15 +223,177 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>My name is Aiden Roach and I am studying biology, statistics, and environmental science at California State University of Monterey Bay. After undergraduate school, I want to go to graduate school for a Ph.D.&nbsp;in ecology or population biology. For my career, I want to study the migration patterns of large mammals to make urban development friendlier towards our animal neighbors. Whenever I have free time, I like to crochet and with my cat Moose.</p>
+<section id="exploring-the-relationship-between-measured-diameter-and-estimated-height-of-pinus-radiata-based-on-size-class" class="level1">
+<h1>Exploring the Relationship Between Measured Diameter and Estimated Height of Pinus radiata Based on Size Class</h1>
+<section id="aiden-roach" class="level2">
+<h2 class="anchored" data-anchor-id="aiden-roach">Aiden Roach</h2>
+</section>
+</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<section id="background" class="level3">
+<h3 class="anchored" data-anchor-id="background">Background</h3>
+<p>Known for its rapid growth and useful lumber, Pinus radiata (Monterey pine) is the most planted pine in the world. The Monterey pine is found naturally in San Mateo, Santa Cruz, Monterey, and San Luis Obispo counties in California but has little demand within the United States of America besides its ornamental value. However the lumber holds value in international markets (McDonald and Laacke 1990). The purpose of this study is to explore the relationship between the measured diameter and the calculated height based on the size class of Monterey pine. If a strong relationship exists, growers would be able to save time and resources by just measuring the diameter of their trees to ensure a tree is large enough for sale rather than measuring the height of each tree.</p>
+</section>
+</section>
+<section id="methods" class="level1">
+<h1>Methods</h1>
+<section id="data-collection" class="level3">
+<h3 class="anchored" data-anchor-id="data-collection">Data Collection</h3>
+<p>The ENVS 350 class arrived at Veteran’s Park in Monterey, California at approximately 8:30am on October 2nd, 2025. Groups of four to five people were randomly assigned to plots within the study site which is defined in Figure 1. Each group mapped their plot using pencil and paper and noted each small, medium, and large tree before randomly selecting three to four trees for measurement in each size category. The three size categories were defined as a class to be based on a visual estimate of the tree size and are not based on any direct measurement. Once trees for each size category have been selected, the diameter of each tree is measured using a fabric diameter tape. The diameter of large trees was measured at 4.5 feet above ground, 25 centimeters above ground for medium trees, and 5 centimeters above ground for small trees. Additionally, the distance from the measurer and tree was recorded using a 50 meter transect tape. The measurer used a clinometer to record the up angle and the down angle off each tree. The distance, up angle, and down angle was used to later calculate the height of each tree in meters as described in Steiner M. and Baker J. 2018.</p>
+</section>
+<section id="statistical-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h3>
+<p>A scatterplot with the measured diameter plotted on the x-axis, the estimated heights plotted on the y-axis, and the size class of the Monterey pine represented by color will be generated using the ggplot package in R. A linear model will be created for each size class using the lm function from base R. Graphics exploring the assumptions for each linear model will be created using the plot function which is also included in base R. Finally, a power analysis of each linear model will be calculated using the pwr.f2.test in the pwr package. The effect size for each power test will be calculated using the equation established in Cohen 1988: <span class="math inline">\(f2 = R^2/ 1-R^2\)</span></p>
+</section>
+</section>
+<section id="results" class="level1">
+<h1>Results</h1>
+<section id="exploratory-data-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h3>
+<p>Multiple transformations were considered, but ultimately no transformation was chosen for the high correlation values. A table of each transformation and their correlations can be found in Table 1. A scatterplot of measured diameter, calculated height, and size class can be found in Figure 2. Looking at the scatterplot, there is a lot of variation in the large size class. This is supported by the <span class="math inline">\(R^2\)</span> value of 0.03532 which means only 3.532% of the variation can be explained by the model of calculated height and measured diameter of large Monterey pine. However there is less variation for the small and medium size classes. This is supported by the <span class="math inline">\(R^2\)</span> values of 0.673 for the small size class and 0.5234 for the medium size class. This means 67.3% of the variation can be explained by the model of calculated height and measured diameter of small Monterey pine and 52.34% of the variation can be explained by the model of calculated height and measured diameter of medium Monterey pine.</p>
+</section>
+<section id="hypothesis-testing" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-testing">Hypothesis Testing</h3>
+<p>Each linear model based on size class produced varying results. We found very little evidence against our null hypothesis that there is no relationship between the estimated height and the calculated diameter when the Monterey pine is considered large (t = 0.789, df = 17, α = 0.05, p-value = 0.441). We found very strong evidence against our null hypothesis that there is no relationship between the estimated height and the calculated diameter when the Monterey pine is considered medium (t = 5.643, df = 29, α = 0.05, p-value = 4.26e-6). We found moderately strong evidence against our null hypothesis that there is no relationship between the estimated height and the calculated diameter when the Monterey pine is considered small (t = 3.514, df = 6, α = 0.05, p-value = 0.0126). The test statistics, R2, degrees of freedom, p-values, and powers of each test are presented in Table 2 for an alternative view.</p>
+<p>We are able to trust the results of the large size class model because we have met the necessary assumptions. When looking at the residuals vs fitted plot in Figure 3, there is an even distribution of the residuals around zero with no definable pattern. This implies that a linear model can be used to describe the relationship between the measured diameter and the calculated height of large Monterey pine, the residuals in the large size class linear model have equal variance, and the residuals in the large size class linear model are independent of each other. Additionally there are no points of concern because no residual has a Cook’s distance larger than 0.5 as shown in the Cook’s distance plot in Figure 3. Finally, we have met the normality assumption based on the Q-Q plot shown in Figure 3. There is some slight deviation at the tails, but this deviation can be explained by the sample size of 19. Since the residuals mostly follow the 1:1 line, we can conclude that the residuals increase at the expected cumulative frequency rate and the normality assumption has been met.</p>
+<p>We are able to trust the results of the medium size class model because we have met the necessary conditions. When looking at the residuals vs fitted plot in Figure 4, there is an even distribution of the residuals around zero with a slight fanning pattern which can be explained by our sample size of 31. The overall lack of a clear pattern implies that a linear model can be used to describe the relationship between the measured diameter and the calculated height of medium Monterey pine, the residuals in the medium size class linear model have equal variance, and the residuals in the medium size class linear model are independent of each other. Additionally there are no points of concern because no residual has a Cook’s distance larger than 0.5 as shown in the Cook’s distance plot in Figure 4. Finally, we have met the normality assumption based on the Q-Q plot shown in Figure 4. The residuals closely follow the 1:1 line even though we have a relatively small sample size of 31. Since the residuals follow the 1:1 line, we can conclude that the residuals increase at the expected cumulative frequency rate and the normality assumption has been met.</p>
+<p>We are unable to trust the results of the small size class model because we have not met the necessary conditions. When looking at the residuals vs fitted plot in Figure 5, there is an uneven distribution of the residuals around zero with three distinct columns visible. This pattern implies that a linear model can not be used to describe the relationship between the measured diameter and the calculated height of small Monterey pine, the residuals in the small size class linear model do not have equal variance, and the residuals in the small size class linear model are not independent of each other. Additionally there is one possible point of concern with a residual having a Cook’s distance greater than 0.5 shown in the Cook’s distance plot in Figure 5. However since the Cook’s distance of that residual is less than 1 it is likely not a major point of influence. Finally, we have not met the normality assumption based on the Q-Q plot shown in Figure 5. There is major deviation at the left tail, but this deviation can be explained by the sample size of 6. Since the residuals do not follow the 1:1 line, we can conclude that the residuals do not increase at the expected cumulative frequency rate and the normality assumption has not been met.</p>
+</section>
+</section>
+<section id="discussion" class="level1">
+<h1>Discussion</h1>
+<p>The differences in results between all three class sizes were quite surprising. Given our small sample sizes for the large size class and the small size class, further studies could collect more data on large and small Monterey pine to see if the pattern we observed remains constant or if we simply lacked a robust dataset. With a larger sample size, there is also the possibility of increasing the power for the large size class linear model. Interestingly, we had collected large enough sample sizes for the medium and small size classes to maintain sufficient power for those linear models. If given the resources, another future study could compare the relationship between measured diameter and calculated height given size class to the relationship between measured diameter and measured height given size class. If using estimated heights produces similar results to the measured heights of trees, future studies would be able to avoid using time and money on measuring the height of each tree of interest.</p>
+</section>
+<section id="figures-and-tables" class="level1">
+<h1>Figures and Tables</h1>
+<section id="table-1.-correlation-values-of-each-transformation-given-size-class." class="level3">
+<h3 class="anchored" data-anchor-id="table-1.-correlation-values-of-each-transformation-given-size-class.">Table 1. Correlation values of each transformation given size class.</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 21%">
+<col style="width: 32%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Size Class</th>
+<th>No Transformation</th>
+<th>Square-root Transformation</th>
+<th>Logarithmic Transformation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Large</td>
+<td>0.1879371</td>
+<td>0.1583630</td>
+<td>0.1436199</td>
+</tr>
+<tr class="even">
+<td>Medium</td>
+<td>0.7234398</td>
+<td>0.7417704</td>
+<td>0.7567372</td>
+</tr>
+<tr class="odd">
+<td>Small</td>
+<td>0.8203660</td>
+<td>0.7909147</td>
+<td>0.7599737</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="table-2.-results-of-each-linear-model" class="level3">
+<h3 class="anchored" data-anchor-id="table-2.-results-of-each-linear-model">Table 2. Results of each linear model</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 11%">
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 11%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Size Class</th>
+<th>R2</th>
+<th>Test Statistic (t)</th>
+<th>Degrees of freedom</th>
+<th>P-value</th>
+<th>Power</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Large</td>
+<td>0.03532</td>
+<td>0.789</td>
+<td>17</td>
+<td>0.44</td>
+<td>0.1235547</td>
+</tr>
+<tr class="even">
+<td>Medium</td>
+<td>0.5234</td>
+<td>5.643</td>
+<td>29</td>
+<td><span class="math inline">\(4.26e^{-6}\)</span></td>
+<td>0.9998802</td>
+</tr>
+<tr class="odd">
+<td>Small</td>
+<td>0.673</td>
+<td>3.514</td>
+<td>6</td>
+<td>0.0126</td>
+<td>0.9189292</td>
+</tr>
+</tbody>
+</table>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="moose_coding.jpg" class="img-fluid figure-img"></p>
-<figcaption>Sometimes Moose helps me with my coding.</figcaption>
+<p><img src="figures/biomass/biomass-fig1.jpg" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. Study site, highlighted in red, at Veteran’s Park in Monterey, California.</figcaption>
 </figure>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/biomass/biomass-fig2.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2. Scatterplot showing the relationship of measured diameter, estimated height, and size class.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/biomass/biomass-fig3.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 3. Diagnostic plots for the large size class linear model.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/biomass/biomass-fig4.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 4. Diagnostic plots for the medium size class linear model.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/biomass/biomass-fig5.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 5. Diagnostic plots for the small size class linear model.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<p>References Cohen J. 1988. Statistical power analysis for the behavioral sciences. 2nd ed.&nbsp;Hillsdale, N.J.: Lawrence Erlbaum Associates.</p>
+<p>McDonald P. and Laacke R. 1990. Pinus radiata D. wwwsrsfsusdagov. https://www.srs.fs.usda.gov/pubs/misc/ag_654/volume_1/pinus/radiata.htm.</p>
+<p>Steiner M. and Baker J. 2018. Measuring Tree Height using a Clinometer | NRI Grazing Land. grazinglandcssmiastateedu. https://grazingland.cssm.iastate.edu/measuring-tree-height-using-clinometer.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
