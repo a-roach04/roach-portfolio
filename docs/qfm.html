@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Woodrat Habitat Analysis – Aiden Roach’s Portfolio</title>
+<title>Other Papers Written for Quantitative Field Methods Course – Aiden Roach’s Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -94,36 +123,21 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About Me</span></a>
+    <a class="nav-link" href="./woodrat.html"> 
+<span class="menu-text">Woodrat Study</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posters.html"> 
-<span class="menu-text">Posters</span></a>
+    <a class="nav-link" href="./urchin.html"> 
+<span class="menu-text">Purple Urchin Study</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-papers" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Papers</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-papers">    
-        <li>
-    <a class="dropdown-item" href="./case_study.html">
- <span class="dropdown-text">Ringtail Case Study</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./case_study.html"> 
+<span class="menu-text">Ringtail Case Study</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./urchin.html">
- <span class="dropdown-text">Purple Urchin Experiment</span></a>
+  <li class="nav-item">
+    <a class="nav-link active" href="./qfm.html" aria-current="page"> 
+<span class="menu-text">Other Papers</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./gis.html">
- <span class="dropdown-text">Woodrat Habitat Analysis</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./biomass.html">
- <span class="dropdown-text">Biomass Methodology</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -140,29 +154,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#conditions-in-university-of-santa-cruzs-fort-ord-nature-reserve-for-woodrat-nests" id="toc-conditions-in-university-of-santa-cruzs-fort-ord-nature-reserve-for-woodrat-nests" class="nav-link active" data-scroll-target="#conditions-in-university-of-santa-cruzs-fort-ord-nature-reserve-for-woodrat-nests">Conditions in University of Santa Cruz’s Fort Ord Nature Reserve for Woodrat Nests</a>
+  <li><a href="#research-proposal" id="toc-research-proposal" class="nav-link active" data-scroll-target="#research-proposal">Research Proposal</a>
   <ul class="collapse">
-  <li><a href="#aiden-roach" id="toc-aiden-roach" class="nav-link" data-scroll-target="#aiden-roach">Aiden Roach</a></li>
-  <li><a href="#may-13-2025" id="toc-may-13-2025" class="nav-link" data-scroll-target="#may-13-2025">May 13, 2025</a></li>
-  </ul></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  </ul></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
-  <ul class="collapse">
-  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection">Data Collection</a></li>
-  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis">Statistical Analysis</a></li>
-  </ul></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
-  <ul class="collapse">
-  <li><a href="#hypothesis-testing" id="toc-hypothesis-testing" class="nav-link" data-scroll-target="#hypothesis-testing">Hypothesis Testing</a></li>
-  <li><a href="#spatial-analysis" id="toc-spatial-analysis" class="nav-link" data-scroll-target="#spatial-analysis">Spatial Analysis</a></li>
-  </ul></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#exploring-the-relationship-between-small-mammal-diversity-and-time-since-anthropogenic-disturbance." id="toc-exploring-the-relationship-between-small-mammal-diversity-and-time-since-anthropogenic-disturbance." class="nav-link" data-scroll-target="#exploring-the-relationship-between-small-mammal-diversity-and-time-since-anthropogenic-disturbance.">Exploring the relationship between small mammal diversity and time since anthropogenic disturbance.</a></li>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#hypothesis" id="toc-hypothesis" class="nav-link" data-scroll-target="#hypothesis">Hypothesis</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  <li><a href="#conference-abstract" id="toc-conference-abstract" class="nav-link" data-scroll-target="#conference-abstract">Conference Abstract</a>
+  <ul class="collapse">
+  <li><a href="#comparing-grazing-efficiency-for-domestic-sheep-and-domestic-goats" id="toc-comparing-grazing-efficiency-for-domestic-sheep-and-domestic-goats" class="nav-link" data-scroll-target="#comparing-grazing-efficiency-for-domestic-sheep-and-domestic-goats">Comparing Grazing Efficiency for Domestic Sheep and Domestic Goats</a></li>
+  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1">Introduction</a></li>
+  <li><a href="#methods-1" id="toc-methods-1" class="nav-link" data-scroll-target="#methods-1">Methods</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#conclusion-1" id="toc-conclusion-1" class="nav-link" data-scroll-target="#conclusion-1">Conclusion</a></li>
+  <li><a href="#figures-1" id="toc-figures-1" class="nav-link" data-scroll-target="#figures-1">Figures</a></li>
+  <li><a href="#references-1" id="toc-references-1" class="nav-link" data-scroll-target="#references-1">References</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -171,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Woodrat Habitat Analysis</h1>
+<h1 class="title">Other Papers Written for Quantitative Field Methods Course</h1>
 </div>
 
 
@@ -188,89 +200,117 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="conditions-in-university-of-santa-cruzs-fort-ord-nature-reserve-for-woodrat-nests" class="level1">
-<h1>Conditions in University of Santa Cruz’s Fort Ord Nature Reserve for Woodrat Nests</h1>
-<section id="aiden-roach" class="level2">
-<h2 class="anchored" data-anchor-id="aiden-roach">Aiden Roach</h2>
-</section>
-<section id="may-13-2025" class="level2">
-<h2 class="anchored" data-anchor-id="may-13-2025">May 13, 2025</h2>
-</section>
-</section>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<section id="background" class="level3">
-<h3 class="anchored" data-anchor-id="background">Background</h3>
-<p>The Dusky-footed woodrat (Neotoma fuscipes) is best known for their large nests. These houses are built of sticks, twigs, and small tree limbs and contain multiple compartments to store food, rest, and raise their young (English 1923 and Laudenslayer, Fargo 1999). The subspecies can be found from San Francisco to San Luis Obisbo, mainly along the Santa Lucia mountain range (Vestal 1938). Another notable characteristic of the dusky-footed woodrat is their social dynamics. The woodrats form communities and share nests frequently. Home ranges of a single woodrat typically overlap with other woodrats regardless of sex. In the nest, one male typically shares a nest with multiple females (Innes, Vuren, Kelt, Johnson, Wilson, Stine 2007).</p>
-</section>
-<section id="objectives" class="level3">
-<h3 class="anchored" data-anchor-id="objectives">Objectives</h3>
-<p>The broadness of the data collected allows for many research questions to be explored. Four research questions were focused on for this report. Is there a relationship between the number of woodrat nests observed and the habitat? Is there a relationship between nest size and vegetation size within the two habitats of interest? And, when considering vegetation type and canopy cover, what portion of the northern section of University of Santa Cruz’s Fort Ord Nature Reserve contains ideal conditions for woodrats?</p>
+<section id="research-proposal" class="level1">
+<h1>Research Proposal</h1>
+<section id="exploring-the-relationship-between-small-mammal-diversity-and-time-since-anthropogenic-disturbance." class="level3">
+<h3 class="anchored" data-anchor-id="exploring-the-relationship-between-small-mammal-diversity-and-time-since-anthropogenic-disturbance.">Exploring the relationship between small mammal diversity and time since anthropogenic disturbance.</h3>
+<section id="aiden-roach" class="level5">
+<h5 class="anchored" data-anchor-id="aiden-roach">Aiden Roach</h5>
 </section>
 </section>
-<section id="methods" class="level1">
-<h1>Methods</h1>
-<section id="data-collection" class="level3">
-<h3 class="anchored" data-anchor-id="data-collection">Data Collection</h3>
-<p>At the northern section of University of Santa Cruz’s Fort Ord Nature Reserve, 30 random points were selected within the oak woodland habitat and 30 random points within the coastal scrubland habitat. These habitats were chosen to determine if there was a preference in nest location based on habitat type. At each point, a three meter radius was measured with the point as the center. Each nest within the radius was measured using a small, medium, or large scale. The type of vegetation the nest was under and the size of the vegetation was recorded, also using a subjective small, medium, or large scale. The sizing scale was used for a quick and efficient data collection process due to the time constraint.</p>
+<section id="abstract" class="level3">
+<h3 class="anchored" data-anchor-id="abstract">Abstract</h3>
+<p>Ecosystems rely on mammals for a variety of services, especially indicating the health of the surrounding area. They are particularly sensitive to human disturbances and can provide evidence of when an area is recovering from human activity. This study aims to quantify how long it takes for small mammals to recolonize an area after human disturbance utilizing methodology applied to a pilot study from the ENVS 350 Fall 2025 class. If a timeline of small mammal recolonization is established, future monitoring programs will only have to complete surveys at those benchmark times rather than using time and money to consistently monitor the habitat of interest.</p>
 </section>
-<section id="statistical-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h3>
-<p>In R Studio, a parametric Chi- Square test was used to test the null hypothesis that there is no association between the habitat type, either oak woodland or coastal scrubland, and the size of the woodrat nest. While the random sample and independence conditions were met, a permuted Chi-Square test was used to test the two null hypotheses that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the oak woodland habitat and that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the coastal scrubland habitat due to the sample size condition being violated in both habitats. R Studio was also used to produce bar charts providing a visual representation of the observed relationship stated in all three hypotheses. In ArcGIS Pro, spatial analysis was conducted using Boolean rasters of canopy cover and vegetation type. Each raster was reclassified based on the presence/absence of woodrat nests then overlaid with each other to determine possible locations of woodrat nests within the northern section of the reserve.</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>Mammals play a vital role in their surrounding environment. They have multiple roles in ecosystems, including seed dispersal, population control for plant species, and aerating soil as they dig burrows. Because of their importance in their habitat, a decline in mammal activity can be an indication that the surrounding ecosystem is becoming unstable (Derhé et al.&nbsp;2017). Other studies have explored methods to reintroduce mammals to affected habitat and how to maintain the reintroduced populations. It’s known that the ability of small mammals to recolonize an area is influenced by the connectivity of surrounding habitat (Mérő et al.&nbsp;2015). However, whether or not the ability of small mammals to recolonize an area is influenced by the time since disturbance has not been quantified, especially in a coastal scrubland.</p>
+</section>
+<section id="hypothesis" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis">Hypothesis</h3>
+<p>This study aims to quantify how mammal diversity varies based on when the site was last disturbed by human activity, specifically in coastal scrubland habitat. As the time since anthropogenic disturbance increases, we expect the diversity of small mammals to also increase. A pilot study was completed by the ENVS 350 Fall 2025 class which examined the density of small mammal burrows at two sites on the California State University of Monterey Bay campus. The pilot study utilized the same procedure described in the methods section of this paper. An example graphic produced by the pilot study is shown in Figure 1 and shows possible differences in small mammal density by site. Given the ease of this pilot study, the proposed study with the additional variable of time since disturbance should have no limitations in terms of feasibility.</p>
+</section>
+<section id="methods" class="level3">
+<h3 class="anchored" data-anchor-id="methods">Methods</h3>
+<section id="data-collection" class="level4">
+<h4 class="anchored" data-anchor-id="data-collection">Data Collection</h4>
+<p>The following three sites for data collection are being proposed for their varying amount of disturbance. The University of Santa Cruz’s Fort Ord Natural Reserve has not been disturbed in at least 30 years given that the reserve was incorporated in 1996 (Fort Ord Natural Reserve – Natural Reserves 2022). Based on imagery from Google Earth, the area behind the Tanimura &amp; Antle Family Memorial Library at California State University of Monterey Bay was disturbed 16 years ago when construction of the library was completed. The area between Imjin Parkway and Abrams Drive as well as Denali Drive and Marina Heights Drive in Marina, California was disturbed about six years ago when construction of housing units was completed. Images of each proposed site can be found in Figures 2, 3, and 4 respectively. A randomly placed 100 by 200 meter area will be defined using ArcGIS prior to data collection. The area will then be subdivided into 20, 10 by 100 meter transects. Surveyors will be randomly assigned to a transect and inspect the entire 10 by 100 meter area for mammal burrows. Data will be logged onto a shared map using the ArcGIS Field Maps program. This procedure will be repeated for each site.</p>
+</section>
+<section id="statistical-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h4>
+<p>Graphics will be created using the tidyverse package in R, specifically the ggplot2 package included. A parametric ANOVA test will be used to assess if the density of mammal burrows varies by site along with a Tukey post-hoc analysis if significant results are found. If the assumptions of the parametric test are not met, a permuted ANOVA as well as permuted two-sample t-tests for the post-hoc analysis with a Bonferroni correction will be used as an alternative. A power analysis to calculate the necessary sample size using the pwr package in R has already been completed using the following values: number of groups is equal to three, effect size is equal to 0.25, significance level is equal to 0.05, and power is equal to 0.8. Effect size was calculated using the cohen.ES function included in the pwr package using a medium effect size. Based on the results of this power analysis, each group needs a minimum of 53 burrows for a power of 0.8. A possible limitation of this study is that a site simply may not contain 53 burrows. If that is the case, a second study site could be considered.</p>
 </section>
 </section>
-<section id="results" class="level1">
-<h1>Results</h1>
-<section id="hypothesis-testing" class="level3">
-<h3 class="anchored" data-anchor-id="hypothesis-testing">Hypothesis Testing</h3>
-<p>The results of the parametric and nonparametric Chi-Square tests produced interesting results. We have strong evidence against our null hypothesis that there is no association between the habitat type, either oak woodland or coastal scrubland, and the size of the woodrat nest (α = 0.05, χ2 = 9.8507, df = 3, p-value = 0.01988). This is supported by the bar chart in Figure 1, which shows that the oak woodland habitat had a higher proportion of small nest size compared to the other two nest sizes while the coastal scrubland had a higher proportion of no nests overall.</p>
-<p>When looking at the individual habitats, we found very weak evidence against our null hypothesis that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the oak woodland habitat (α = 0.05, χ2 = 1.330694, p-value = 0.8757) and very weak evidence against our null hypothesis that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the coastal scrubland habitat (α = 0.05, χ2 = 3.569524, p-value = 0.5495). These results contradict the bar charts in Figure 2 and Figure 3. Figure 2 shows that there is some variation in nest size based on tree size within the oak woodland while Figure 3 shows the same relationship in the coastal scrubland. A possible explanation for this difference is the low power calculated. While a power of 0.8 was desired, using R Studio, a power of 0.0669 for the oak woodland subset and 0.0580 for the coastal scrubland was calculated given the sample sizes of 33 and 16 respectively.</p>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>We should be monitoring the diversity of small mammals as an indicator of the health of the surrounding ecosystem. Small mammals are particularly sensitive to human activity (Lawer et al.&nbsp;2019). Given their reactiveness, if the diversity of small mammals is relatively high for an area then it would indicate that other species have likely recolonized the area again. This project would also provide some indication of how long it takes for small mammals to reestablish themselves in an area, and therefore provide an appropriate time to assess habitat stability. For example if this project finds the small mammals can reestablish themselves about five years after disturbance, then future projects can save time and money by only assessing their study area five years after disturbance rather than yearly.</p>
 </section>
-<section id="spatial-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="spatial-analysis">Spatial Analysis</h3>
-<p>The spatial analysis showed that the canopy cover had little effect on reducing the possible locations for woodrat nests, making vegetation type the biggest factor. Using the reclassify tool in ArcGIS Pro, it was shown that canopy cover of 50% or greater and vegetation types other than general woodland and shrubland were not ideal locations for woodrat nests. Both the vegetation type and canopy cover rasters were then overlaid with each other using the raster calculator tool to produce the overall ideal habitat area for woodrats within the reserve as shown in Figure 4. The layout shown in Figure 4 has images showing the areas that match the canopy cover condition in yellow, the areas that match the vegetation condition in blue, as well as the areas that meet both the canopy cover and vegetation conditions in green.</p>
-</section>
-</section>
-<section id="discussion" class="level1">
-<h1>Discussion</h1>
-<p>Overall, the habitat type does have an effect on whether woodrat nests were observed or not. However the size of the vegetation has no relationship with the size of the woodrat nest, although the low power suggests that we were simply unable to detect a true alternative. While the broadness of the dataset allowed for efficient data collection, there are some areas that could be improved. Further studies should consider the southern boundary of University of Santa Cruz’s Fort Ord Nature Reserve in addition to the northern boundary to increase the power of the study. Another area for improvement is taking more detailed data, such as measuring each nest and the vegetation, considering other factors in habitat such as slope, or using thermal sensors to determine if the nest is being actively used or not (Payne, Wade, Hartley, Shemmings-Payne. 2023). These gaps in understanding could be considered a weakness in the study; however, this study provided a foundation of basic woodrat ecology for further studies to build upon.</p>
-</section>
-<section id="references" class="level1">
-<h1>References</h1>
-<p>English PF. 1923. The Dusky-Footed Wood Rat (Neotoma fuscipes). Journal of Mammalogy. 4(1):1–1</p>
-<p>Innes RJ, Vuren DHV, Kelt DA, Johnson ML, Wilson JA, Stine PA. 2007. Habitat Associations of Dusky-footed Woodrats (Neotoma fuscipes) in Mixed-conifer Forest of the Northern Sierra Nevada. Journal of Mammalogy. 88(6):1523–1531.</p>
-<p>Laudenslayer WF, Fargo R. 1999. Are house counts reliable estimators of dusky-footed woodrat population size? Transactions of the Western Section of the Wildlife Society. 35:71–75.</p>
-<p>Payne W, Wade D, Hartley I, Shemmings-Payne J. 2023 Jan 9. An evaluation of thermal imaging as a tool for assessing occupancy of enclosed nests. Ringing &amp; Migration.:1–11. doi:https://doi.org/10.1080/03078698.2022.2160788.</p>
-<p>Vestal EH. 1938. Biotic Relations of the Wood Rat (Neotoma fuscipes) in the Berkeley Hills. Journal of Mammalogy. 19(1):1–1</p>
-</section>
-<section id="figures" class="level1">
-<h1>Figures</h1>
+<section id="figures" class="level3">
+<h3 class="anchored" data-anchor-id="figures">Figures</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/woodrat/woodrat_fig1.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 1. Bar chart showing the relationship between the nest size in meters and the proportion of observed nests based on habitat type.</figcaption>
+<p><img src="figures/prop/prop-fig1.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. Density of small mammal burrows for the two sites sampled during a pilot study.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/woodrat/woodrat_fig2.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 2. Bar chart showing the relationship between the nest size in meters and the proportion of observed nests within the oak woodland based on vegetation size.</figcaption>
+<p><img src="figures/prop/prop-fig2.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2. Aerial view of University of Santa Cruz’s Fort Ord Natural Reserve currently. Image taken using Google Earth.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/woodrat/woodrat_fig3.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 3. Bar chart showing the relationship between the nest size in meters and the proportion of observed nests within the coastal scrubland based on vegetation size.</figcaption>
+<p><img src="figures/prop/prop-fig3.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 3. Proposed site behind the Tanimura &amp; Antle Family Memorial Library showing construction in 2007 (a) and the current view (b). Image taken using Google Earth.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/woodrat/woodrat_fig4.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 4. Layout created in ArcGIS Pro showing the potential locations of woodrat nests based on canopy cover and vegetation type.</figcaption>
+<p><img src="figures/prop/prop-fig4.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 4. Proposed site in Marina showing construction in 2018 (a) and current view (b). Image taken using Google Earth.</figcaption>
 </figure>
 </div>
+</section>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<p>Derhé MA, Murphy HT, Preece ND, Lawes MJ, Menéndez R. 2017. Recovery of mammal diversity in tropical forests: a functional approach to measuring restoration. Restoration Ecology. 26(4):778–786. doi:https://doi.org/10.1111/rec.12582.</p>
+<p>Fort Ord Natural Reserve – Natural Reserves. 2022. Ucscedu. https://naturalreserves.ucsc.edu/fort-ord-natural-reserve/.</p>
+<p>Lawer EA, Mupepele A-C, Klein A-M. 2019. Responses of small mammals to land restoration after mining. Landscape Ecology. 34(3):473–485. doi:https://doi.org/10.1007/s10980-019-00785-z.</p>
+<p>Mérő TO, Bocz R, Polyák L, Horváth G, Lengyel S. 2015. Local habitat management and landscape-scale restoration influence small-mammal communities in grasslands. Animal Conservation. 18(5):442–450. doi:https://doi.org/10.1111/acv.12191.</p>
+</section>
+</section>
+<section id="conference-abstract" class="level1">
+<h1>Conference Abstract</h1>
+<section id="comparing-grazing-efficiency-for-domestic-sheep-and-domestic-goats" class="level3">
+<h3 class="anchored" data-anchor-id="comparing-grazing-efficiency-for-domestic-sheep-and-domestic-goats">Comparing Grazing Efficiency for Domestic Sheep and Domestic Goats</h3>
+<section id="aiden-roach-1" class="level5">
+<h5 class="anchored" data-anchor-id="aiden-roach-1">Aiden Roach</h5>
+</section>
+</section>
+<section id="introduction-1" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-1">Introduction</h3>
+<p>There are multiple treatments used in grasslands to manage invasive plant species. One of the earliest in human history is using livestock for grazing. Prescription grazing is defined as using livestock under set parameters to achieve a certain management goal (Frost and Launchbaugh 2003). Prescription grazing is most efficient over long-periods of time as opposed to a singular grazing application (Treadwell et al.&nbsp;2023). This study aims to determine if domestic goats or domestic sheep are more effective at reducing the net mass, in grams, of plant material. If one species is determined to be a more effective grazer, managers of grassland habitats can make a more informed decision of which grazing herds to implement.</p>
+</section>
+<section id="methods-1" class="level3">
+<h3 class="anchored" data-anchor-id="methods-1">Methods</h3>
+<p>The study site was Fort Ord National Monument in Monterey County, California. A 9,600 meter2 plot was randomly placed using ArcGIS. This plot was then divided into 16 transects which were ten meters by 60 meters. Each transect contained six, ten meter by ten meter, plots with a randomly determined point within each plot. At each point, a half meter by half meter square constructed with PVC pipe was placed on the ground. Within the cell, all plant material was cut, collected into a paper bag, dried, and weighed as described in Elzinga, Salzer, and Willoughby 1998. This process was repeated each year for the 23 years of data collection.</p>
+</section>
+<section id="results" class="level3">
+<h3 class="anchored" data-anchor-id="results">Results</h3>
+<p>From 1998 to 2021, 1471 plots were grazed by goats and 401 plots were grazed by sheep. A square-root transformation was applied to normalize the data. When looking at the boxplots in Figure 1, we see that the entire boxplot for sheep grazing overlaps with the entire boxplot for goat grazing. The complete implies that there is likely no difference in the true mean net mass, in grams, in a plot grazed by goats and the true mean net mass, in grams, in a plot grazed by sheep, assuming the treatment of grazed or ungrazed is held constant. However, we found moderately strong evidence against our null hypothesis that there is no difference in the true mean net mass, in grams, in a plot grazed by goats and the true mean net mass, in grams, in a plot grazed by sheep, assuming the treatment of grazed or ungrazed is held constant (F = 9.644, degrees of freedom = 1, <span class="math inline">\(\alpha\)</span> = 0.05, p-value = 0.00193). Using a Tukey post-hoc analysis, we found moderately strong evidence against our null hypothesis that the true mean difference in plots that were grazed by sheep and in plots that were grazed by goats is equal to one (t = 5.020748, <span class="math inline">\(\alpha\)</span> = 0.05, p-value = 0.0026979).</p>
+</section>
+<section id="conclusion-1" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion-1">Conclusion</h3>
+<p>There is a significant difference in the true mean net mass, in grams, in a plot grazed by goats and the true mean net mass, in grams, in a plot grazed by sheep, assuming the treatment of grazed or ungrazed is held constant. Goats are more efficient at reducing the net dry mass of plant material than sheep. However we should be cautious of trusting the results of our analysis because we did not meet the condition of normality or the condition of equal variances, which prevents us from using the F-distribution as a model for our sampling distribution. Future studies could explore the same research using nonparametric analyses.</p>
+</section>
+<section id="figures-1" class="level3">
+<h3 class="anchored" data-anchor-id="figures-1">Figures</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/conf/conf-fig1.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. Boxplot comparing the net dry mass of plant material, in grams, for plots that were grazed by sheep, plots that were grazed by goats, and plots that were not grazed.</figcaption>
+</figure>
+</div>
+</section>
+<section id="references-1" class="level3">
+<h3 class="anchored" data-anchor-id="references-1">References</h3>
+<p>Elzinga C, Salzer D, Willoughby J. 1998. MEASURING &amp; MONITORING Plant Populations. Denver, CO: U.S. Department of the Interior Bureau of Land Management. https://www.ntc.blm.gov/krc/system/files/legacy/uploads/3342/technical%20reference.pdf.</p>
+<p>Frost R, Launchbaugh K. 2003 Dec.&nbsp;Prescription Grazing for Rangeland Weed Management. https://targetedgrazing.wordpress.com/wp-content/uploads/2014/02/frost_launchbaugh_rangelands_03.pdf.</p>
+<p>Treadwell M, Brooke C, Sullivan E. 2023. TARGETED GRAZING WITH GOATS AND SHEEP Associate Professor, Rangeland, Wildlife, and Fisheries Management and Extension Range Specialist, Texas A&amp;M AgriLife Extension Service 2 County Extension Agent -Agriculture &amp; Natural Resources, Texas A&amp;M AgriLife Extension Service. https://agrilife.org/westtexasrangelands/files/2023/03/targeted-grazing-with-goats-and-sheep.pdf.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

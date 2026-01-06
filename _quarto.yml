@@ -8,16 +8,16 @@ website:
     left:
       - href: index.qmd
         text: "Home"
-      - href: about.qmd
-        text: "About Me"
-      - href: posters.qmd
-        text: "Posters"
-      - text: "Papers"
-        menu: 
-        - href: case_study.qmd
-        - href: urchin.qmd
-        - href: gis.qmd
-        - href: biomass.qmd
+      #- href: about.qmd
+       # text: "About Me"
+      - href: woodrat.qmd
+        text: "Woodrat Study"
+      - href: urchin.qmd
+        text: "Purple Urchin Study"
+      - href: case_study.qmd
+        text: "Ringtail Case Study"
+      - href: qfm.qmd
+        text: "Other Papers"
 format:
   html:
     theme: Superhero

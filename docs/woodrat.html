@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Biomass Methodology – Aiden Roach’s Portfolio</title>
+<title>Dusky-footed Woodrat Study – Aiden Roach’s Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,35 +68,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -123,36 +94,21 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About Me</span></a>
+    <a class="nav-link active" href="./woodrat.html" aria-current="page"> 
+<span class="menu-text">Woodrat Study</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posters.html"> 
-<span class="menu-text">Posters</span></a>
+    <a class="nav-link" href="./urchin.html"> 
+<span class="menu-text">Purple Urchin Study</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-papers" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Papers</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-papers">    
-        <li>
-    <a class="dropdown-item" href="./case_study.html">
- <span class="dropdown-text">Ringtail Case Study</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./case_study.html"> 
+<span class="menu-text">Ringtail Case Study</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./urchin.html">
- <span class="dropdown-text">Purple Urchin Experiment</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./qfm.html"> 
+<span class="menu-text">Other Papers</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./gis.html">
- <span class="dropdown-text">Woodrat Habitat Analysis</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./biomass.html">
- <span class="dropdown-text">Biomass Methodology</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -169,31 +125,21 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#exploring-the-relationship-between-measured-diameter-and-estimated-height-of-pinus-radiata-based-on-size-class" id="toc-exploring-the-relationship-between-measured-diameter-and-estimated-height-of-pinus-radiata-based-on-size-class" class="nav-link active" data-scroll-target="#exploring-the-relationship-between-measured-diameter-and-estimated-height-of-pinus-radiata-based-on-size-class">Exploring the Relationship Between Measured Diameter and Estimated Height of <em>Pinus radiata</em> Based on Size Class</a>
+  <li><a href="#poster" id="toc-poster" class="nav-link active" data-scroll-target="#poster">Poster</a></li>
+  <li><a href="#paper" id="toc-paper" class="nav-link" data-scroll-target="#paper">Paper</a>
+  <ul class="collapse">
+  <li><a href="#conditions-in-university-of-santa-cruzs-fort-ord-nature-reserve-for-woodrat-nests" id="toc-conditions-in-university-of-santa-cruzs-fort-ord-nature-reserve-for-woodrat-nests" class="nav-link" data-scroll-target="#conditions-in-university-of-santa-cruzs-fort-ord-nature-reserve-for-woodrat-nests">Conditions in University of Santa Cruz’s Fort Ord Nature Reserve for Woodrat Nests</a>
   <ul class="collapse">
   <li><a href="#aiden-roach" id="toc-aiden-roach" class="nav-link" data-scroll-target="#aiden-roach">Aiden Roach</a></li>
+  <li><a href="#may-13-2025" id="toc-may-13-2025" class="nav-link" data-scroll-target="#may-13-2025">May 13, 2025</a></li>
   </ul></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  </ul></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
-  <ul class="collapse">
-  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection">Data Collection</a></li>
-  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis">Statistical Analysis</a></li>
-  </ul></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
-  <ul class="collapse">
-  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">Exploratory Data Analysis</a></li>
-  <li><a href="#hypothesis-testing" id="toc-hypothesis-testing" class="nav-link" data-scroll-target="#hypothesis-testing">Hypothesis Testing</a></li>
-  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
   <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
-  <li><a href="#figures-and-tables" id="toc-figures-and-tables" class="nav-link" data-scroll-target="#figures-and-tables">Figures and Tables</a>
-  <ul class="collapse">
-  <li><a href="#table-1.-correlation-values-of-each-transformation-given-size-class." id="toc-table-1.-correlation-values-of-each-transformation-given-size-class." class="nav-link" data-scroll-target="#table-1.-correlation-values-of-each-transformation-given-size-class.">Table 1. Correlation values of each transformation given size class.</a></li>
-  <li><a href="#table-2.-results-of-each-linear-model" id="toc-table-2.-results-of-each-linear-model" class="nav-link" data-scroll-target="#table-2.-results-of-each-linear-model">Table 2. Results of each linear model</a></li>
-  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -202,7 +148,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Biomass Methodology</h1>
+<h1 class="title">Dusky-footed Woodrat Study</h1>
 </div>
 
 
@@ -219,176 +165,96 @@ window.Quarto = {
 </header>
 
 
-<section id="exploring-the-relationship-between-measured-diameter-and-estimated-height-of-pinus-radiata-based-on-size-class" class="level1">
-<h1>Exploring the Relationship Between Measured Diameter and Estimated Height of <em>Pinus radiata</em> Based on Size Class</h1>
-<section id="aiden-roach" class="level2">
-<h2 class="anchored" data-anchor-id="aiden-roach">Aiden Roach</h2>
+<section id="poster" class="level1">
+<h1>Poster</h1>
+<p><img src="posters/woodrat_poster.jpg" class="img-fluid"></p>
+</section>
+<section id="paper" class="level1">
+<h1>Paper</h1>
+<section id="conditions-in-university-of-santa-cruzs-fort-ord-nature-reserve-for-woodrat-nests" class="level2">
+<h2 class="anchored" data-anchor-id="conditions-in-university-of-santa-cruzs-fort-ord-nature-reserve-for-woodrat-nests">Conditions in University of Santa Cruz’s Fort Ord Nature Reserve for Woodrat Nests</h2>
+<section id="aiden-roach" class="level3">
+<h3 class="anchored" data-anchor-id="aiden-roach">Aiden Roach</h3>
+</section>
+<section id="may-13-2025" class="level3">
+<h3 class="anchored" data-anchor-id="may-13-2025">May 13, 2025</h3>
 </section>
 </section>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<section id="background" class="level3">
-<h3 class="anchored" data-anchor-id="background">Background</h3>
-<p>Known for its rapid growth and useful lumber, Pinus radiata (Monterey pine) is the most planted pine in the world. The Monterey pine is found naturally in San Mateo, Santa Cruz, Monterey, and San Luis Obispo counties in California but has little demand within the United States of America besides its ornamental value. However the lumber holds value in international markets (McDonald and Laacke 1990). The purpose of this study is to explore the relationship between the measured diameter and the calculated height based on the size class of Monterey pine. If a strong relationship exists, growers would be able to save time and resources by just measuring the diameter of their trees to ensure a tree is large enough for sale rather than measuring the height of each tree.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="background" class="level4">
+<h4 class="anchored" data-anchor-id="background">Background</h4>
+<p>Known for their large nests, <em>Neotoma fuscipes</em> (Dusky-footed woodrat) build their nests using sticks, twigs, and small tree limbs and contain multiple compartments to store food, rest, and raise their young (English 1923 and Laudenslayer, Fargo 1999). The subspecies can be found from San Francisco to San Luis Obisbo, mainly along the Santa Lucia mountain range (Vestal 1938). Another notable characteristic of the dusky-footed woodrat is their social dynamics. The woodrats form communities and share nests frequently. Home ranges of a single woodrat typically overlap with other woodrats regardless of sex. In the nest, one male typically shares a nest with multiple females (Innes, Vuren, Kelt, Johnson, Wilson, Stine 2007).</p>
+</section>
+<section id="objectives" class="level4">
+<h4 class="anchored" data-anchor-id="objectives">Objectives</h4>
+<p>The broadness of the data collected allows for many research questions to be explored. Four research questions were focused on for this report. Is there a relationship between the number of woodrat nests observed and the habitat? Is there a relationship between nest size and vegetation size within the two habitats of interest? And, when considering vegetation type and canopy cover, what portion of the northern section of University of Santa Cruz’s Fort Ord Nature Reserve contains ideal conditions for woodrats?</p>
 </section>
 </section>
-<section id="methods" class="level1">
-<h1>Methods</h1>
-<section id="data-collection" class="level3">
-<h3 class="anchored" data-anchor-id="data-collection">Data Collection</h3>
-<p>The ENVS 350 class arrived at Veteran’s Park in Monterey, California at approximately 8:30am on October 2nd, 2025. Groups of four to five people were randomly assigned to plots within the study site which is defined in Figure 1. Each group mapped their plot using pencil and paper and noted each small, medium, and large tree before randomly selecting three to four trees for measurement in each size category. The three size categories were defined as a class to be based on a visual estimate of the tree size and are not based on any direct measurement. Once trees for each size category have been selected, the diameter of each tree is measured using a fabric diameter tape. The diameter of large trees was measured at 4.5 feet above ground, 25 centimeters above ground for medium trees, and 5 centimeters above ground for small trees. Additionally, the distance from the measurer and tree was recorded using a 50 meter transect tape. The measurer used a clinometer to record the up angle and the down angle off each tree. The distance, up angle, and down angle was used to later calculate the height of each tree in meters as described in Steiner M. and Baker J. 2018.</p>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="data-collection" class="level4">
+<h4 class="anchored" data-anchor-id="data-collection">Data Collection</h4>
+<p>At the northern section of University of Santa Cruz’s Fort Ord Nature Reserve, 30 random points were selected within the oak woodland habitat and 30 random points within the coastal scrubland habitat. These habitats were chosen to determine if there was a preference in nest location based on habitat type. At each point, a three meter radius was measured with the point as the center. Each nest within the radius was measured using a small, medium, or large scale. The type of vegetation the nest was under and the size of the vegetation was recorded, also using a subjective small, medium, or large scale. The sizing scale was used for a quick and efficient data collection process due to the time constraint.</p>
 </section>
-<section id="statistical-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h3>
-<p>A scatterplot with the measured diameter plotted on the x-axis, the estimated heights plotted on the y-axis, and the size class of the Monterey pine represented by color will be generated using the ggplot package in R. A linear model will be created for each size class using the lm function from base R. Graphics exploring the assumptions for each linear model will be created using the plot function which is also included in base R. Finally, a power analysis of each linear model will be calculated using the pwr.f2.test in the pwr package. The effect size for each power test will be calculated using the equation established in Cohen 1988: <span class="math inline">\(f_2 = R^2/ 1-R^2\)</span></p>
-</section>
-</section>
-<section id="results" class="level1">
-<h1>Results</h1>
-<section id="exploratory-data-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h3>
-<p>Multiple transformations were considered, but ultimately no transformation was chosen for the high correlation values. A table of each transformation and their correlations can be found in Table 1. A scatterplot of measured diameter, calculated height, and size class can be found in Figure 2. Looking at the scatterplot, there is a lot of variation in the large size class. This is supported by the <span class="math inline">\(R^2\)</span> value of 0.03532 which means only 3.532% of the variation can be explained by the model of calculated height and measured diameter of large Monterey pine. However there is less variation for the small and medium size classes. This is supported by the <span class="math inline">\(R^2\)</span> values of 0.673 for the small size class and 0.5234 for the medium size class. This means 67.3% of the variation can be explained by the model of calculated height and measured diameter of small Monterey pine and 52.34% of the variation can be explained by the model of calculated height and measured diameter of medium Monterey pine.</p>
-</section>
-<section id="hypothesis-testing" class="level3">
-<h3 class="anchored" data-anchor-id="hypothesis-testing">Hypothesis Testing</h3>
-<p>Each linear model based on size class produced varying results. We found very little evidence against our null hypothesis that there is no relationship between the estimated height and the calculated diameter when the Monterey pine is considered large (t = 0.789, df = 17, α = 0.05, p-value = 0.441). We found very strong evidence against our null hypothesis that there is no relationship between the estimated height and the calculated diameter when the Monterey pine is considered medium (t = 5.643, df = 29, α = 0.05, p-value = 4.26e-6). We found moderately strong evidence against our null hypothesis that there is no relationship between the estimated height and the calculated diameter when the Monterey pine is considered small (t = 3.514, df = 6, α = 0.05, p-value = 0.0126). The test statistics, R2, degrees of freedom, p-values, and powers of each test are presented in Table 2 for an alternative view.</p>
-<p>We are able to trust the results of the large size class model because we have met the necessary assumptions. When looking at the residuals vs fitted plot in Figure 3, there is an even distribution of the residuals around zero with no definable pattern. This implies that a linear model can be used to describe the relationship between the measured diameter and the calculated height of large Monterey pine, the residuals in the large size class linear model have equal variance, and the residuals in the large size class linear model are independent of each other. Additionally there are no points of concern because no residual has a Cook’s distance larger than 0.5 as shown in the Cook’s distance plot in Figure 3. Finally, we have met the normality assumption based on the Q-Q plot shown in Figure 3. There is some slight deviation at the tails, but this deviation can be explained by the sample size of 19. Since the residuals mostly follow the 1:1 line, we can conclude that the residuals increase at the expected cumulative frequency rate and the normality assumption has been met.</p>
-<p>We are able to trust the results of the medium size class model because we have met the necessary conditions. When looking at the residuals vs fitted plot in Figure 4, there is an even distribution of the residuals around zero with a slight fanning pattern which can be explained by our sample size of 31. The overall lack of a clear pattern implies that a linear model can be used to describe the relationship between the measured diameter and the calculated height of medium Monterey pine, the residuals in the medium size class linear model have equal variance, and the residuals in the medium size class linear model are independent of each other. Additionally there are no points of concern because no residual has a Cook’s distance larger than 0.5 as shown in the Cook’s distance plot in Figure 4. Finally, we have met the normality assumption based on the Q-Q plot shown in Figure 4. The residuals closely follow the 1:1 line even though we have a relatively small sample size of 31. Since the residuals follow the 1:1 line, we can conclude that the residuals increase at the expected cumulative frequency rate and the normality assumption has been met.</p>
-<p>We are unable to trust the results of the small size class model because we have not met the necessary conditions. When looking at the residuals vs fitted plot in Figure 5, there is an uneven distribution of the residuals around zero with three distinct columns visible. This pattern implies that a linear model can not be used to describe the relationship between the measured diameter and the calculated height of small Monterey pine, the residuals in the small size class linear model do not have equal variance, and the residuals in the small size class linear model are not independent of each other. Additionally there is one possible point of concern with a residual having a Cook’s distance greater than 0.5 shown in the Cook’s distance plot in Figure 5. However since the Cook’s distance of that residual is less than 1 it is likely not a major point of influence. Finally, we have not met the normality assumption based on the Q-Q plot shown in Figure 5. There is major deviation at the left tail, but this deviation can be explained by the sample size of 6. Since the residuals do not follow the 1:1 line, we can conclude that the residuals do not increase at the expected cumulative frequency rate and the normality assumption has not been met.</p>
+<section id="statistical-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h4>
+<p>In R Studio, a parametric Chi- Square test was used to test the null hypothesis that there is no association between the habitat type, either oak woodland or coastal scrubland, and the size of the woodrat nest. While the random sample and independence conditions were met, a permuted Chi-Square test was used to test the two null hypotheses that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the oak woodland habitat and that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the coastal scrubland habitat due to the sample size condition being violated in both habitats. R Studio was also used to produce bar charts providing a visual representation of the observed relationship stated in all three hypotheses. In ArcGIS Pro, spatial analysis was conducted using Boolean rasters of canopy cover and vegetation type. Each raster was reclassified based on the presence/absence of woodrat nests then overlaid with each other to determine possible locations of woodrat nests within the northern section of the reserve.</p>
 </section>
 </section>
-<section id="discussion" class="level1">
-<h1>Discussion</h1>
-<p>The differences in results between all three class sizes were quite surprising. Given our small sample sizes for the large size class and the small size class, further studies could collect more data on large and small Monterey pine to see if the pattern we observed remains constant or if we simply lacked a robust dataset. With a larger sample size, there is also the possibility of increasing the power for the large size class linear model. Interestingly, we had collected large enough sample sizes for the medium and small size classes to maintain sufficient power for those linear models. If given the resources, another future study could compare the relationship between measured diameter and calculated height given size class to the relationship between measured diameter and measured height given size class. If using estimated heights produces similar results to the measured heights of trees, future studies would be able to avoid using time and money on measuring the height of each tree of interest.</p>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="hypothesis-testing" class="level4">
+<h4 class="anchored" data-anchor-id="hypothesis-testing">Hypothesis Testing</h4>
+<p>The results of the parametric and nonparametric Chi-Square tests produced interesting results. We have strong evidence against our null hypothesis that there is no association between the habitat type, either oak woodland or coastal scrubland, and the size of the woodrat nest (α = 0.05, χ2 = 9.8507, df = 3, p-value = 0.01988). This is supported by the bar chart in Figure 1, which shows that the oak woodland habitat had a higher proportion of small nest size compared to the other two nest sizes while the coastal scrubland had a higher proportion of no nests overall.</p>
+<p>When looking at the individual habitats, we found very weak evidence against our null hypothesis that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the oak woodland habitat (α = 0.05, χ2 = 1.330694, p-value = 0.8757) and very weak evidence against our null hypothesis that there is no association between the size of the woodrat nest and the size of the tree the nest is under within the coastal scrubland habitat (α = 0.05, χ2 = 3.569524, p-value = 0.5495). These results contradict the bar charts in Figure 2 and Figure 3. Figure 2 shows that there is some variation in nest size based on tree size within the oak woodland while Figure 3 shows the same relationship in the coastal scrubland. A possible explanation for this difference is the low power calculated. While a power of 0.8 was desired, using R Studio, a power of 0.0669 for the oak woodland subset and 0.0580 for the coastal scrubland was calculated given the sample sizes of 33 and 16 respectively.</p>
 </section>
-<section id="figures-and-tables" class="level1">
-<h1>Figures and Tables</h1>
-<section id="table-1.-correlation-values-of-each-transformation-given-size-class." class="level3">
-<h3 class="anchored" data-anchor-id="table-1.-correlation-values-of-each-transformation-given-size-class.">Table 1. Correlation values of each transformation given size class.</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 23%">
-<col style="width: 26%">
-<col style="width: 26%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Size Class</th>
-<th>No Transformation</th>
-<th>Square-root Transformation</th>
-<th>Logarithmic Transformation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Large</td>
-<td>0.1879371</td>
-<td>0.1583630</td>
-<td>0.1436199</td>
-</tr>
-<tr class="even">
-<td>Medium</td>
-<td>0.7234398</td>
-<td>0.7417704</td>
-<td>0.7567372</td>
-</tr>
-<tr class="odd">
-<td>Small</td>
-<td>0.8203660</td>
-<td>0.7909147</td>
-<td>0.7599737</td>
-</tr>
-</tbody>
-</table>
+<section id="spatial-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="spatial-analysis">Spatial Analysis</h4>
+<p>The spatial analysis showed that the canopy cover had little effect on reducing the possible locations for woodrat nests, making vegetation type the biggest factor. Using the reclassify tool in ArcGIS Pro, it was shown that canopy cover of 50% or greater and vegetation types other than general woodland and shrubland were not ideal locations for woodrat nests. Both the vegetation type and canopy cover rasters were then overlaid with each other using the raster calculator tool to produce the overall ideal habitat area for woodrats within the reserve as shown in Figure 4. The layout shown in Figure 4 has images showing the areas that match the canopy cover condition in yellow, the areas that match the vegetation condition in blue, as well as the areas that meet both the canopy cover and vegetation conditions in green.</p>
 </section>
-<section id="table-2.-results-of-each-linear-model" class="level3">
-<h3 class="anchored" data-anchor-id="table-2.-results-of-each-linear-model">Table 2. Results of each linear model</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Size Class</th>
-<th>R2</th>
-<th>Test Statistic (t)</th>
-<th>Degrees of freedom</th>
-<th>P-value</th>
-<th>Power</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Large</td>
-<td>0.03532</td>
-<td>0.789</td>
-<td>17</td>
-<td>0.44</td>
-<td>0.1235547</td>
-</tr>
-<tr class="even">
-<td>Medium</td>
-<td>0.5234</td>
-<td>5.643</td>
-<td>29</td>
-<td><span class="math inline">\(4.26e^{-6}\)</span></td>
-<td>0.9998802</td>
-</tr>
-<tr class="odd">
-<td>Small</td>
-<td>0.673</td>
-<td>3.514</td>
-<td>6</td>
-<td>0.0126</td>
-<td>0.9189292</td>
-</tr>
-</tbody>
-</table>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>Overall, the habitat type does have an effect on whether woodrat nests were observed or not. However the size of the vegetation has no relationship with the size of the woodrat nest, although the low power suggests that we were simply unable to detect a true alternative. While the broadness of the dataset allowed for efficient data collection, there are some areas that could be improved. Further studies should consider the southern boundary of University of Santa Cruz’s Fort Ord Nature Reserve in addition to the northern boundary to increase the power of the study. Another area for improvement is taking more detailed data, such as measuring each nest and the vegetation, considering other factors in habitat such as slope, or using thermal sensors to determine if the nest is being actively used or not (Payne, Wade, Hartley, Shemmings-Payne. 2023). These gaps in understanding could be considered a weakness in the study; however, this study provided a foundation of basic woodrat ecology for further studies to build upon.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>English PF. 1923. The Dusky-Footed Wood Rat (Neotoma fuscipes). Journal of Mammalogy. 4(1):1–1</p>
+<p>Innes RJ, Vuren DHV, Kelt DA, Johnson ML, Wilson JA, Stine PA. 2007. Habitat Associations of Dusky-footed Woodrats (Neotoma fuscipes) in Mixed-conifer Forest of the Northern Sierra Nevada. Journal of Mammalogy. 88(6):1523–1531.</p>
+<p>Laudenslayer WF, Fargo R. 1999. Are house counts reliable estimators of dusky-footed woodrat population size? Transactions of the Western Section of the Wildlife Society. 35:71–75.</p>
+<p>Payne W, Wade D, Hartley I, Shemmings-Payne J. 2023 Jan 9. An evaluation of thermal imaging as a tool for assessing occupancy of enclosed nests. Ringing &amp; Migration.:1–11. doi:https://doi.org/10.1080/03078698.2022.2160788.</p>
+<p>Vestal EH. 1938. Biotic Relations of the Wood Rat (Neotoma fuscipes) in the Berkeley Hills. Journal of Mammalogy. 19(1):1–1</p>
+</section>
+<section id="figures" class="level2">
+<h2 class="anchored" data-anchor-id="figures">Figures</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/biomass/biomass-fig1.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 1. Study site, highlighted in red, at Veteran’s Park in Monterey, California.</figcaption>
+<p><img src="figures/woodrat/woodrat_fig1.jpg" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. Bar chart showing the relationship between the nest size in meters and the proportion of observed nests based on habitat type.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/biomass/biomass-fig2.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 2. Scatterplot showing the relationship of measured diameter, estimated height, and size class.</figcaption>
+<p><img src="figures/woodrat/woodrat_fig2.jpg" class="img-fluid figure-img"></p>
+<figcaption>Figure 2. Bar chart showing the relationship between the nest size in meters and the proportion of observed nests within the oak woodland based on vegetation size.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/biomass/biomass-fig3.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 3. Diagnostic plots for the large size class linear model.</figcaption>
+<p><img src="figures/woodrat/woodrat_fig3.jpg" class="img-fluid figure-img"></p>
+<figcaption>Figure 3. Bar chart showing the relationship between the nest size in meters and the proportion of observed nests within the coastal scrubland based on vegetation size.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/biomass/biomass-fig4.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 4. Diagnostic plots for the medium size class linear model.</figcaption>
+<p><img src="figures/woodrat/woodrat_fig4.jpg" class="img-fluid figure-img"></p>
+<figcaption>Figure 4. Layout created in ArcGIS Pro showing the potential locations of woodrat nests based on canopy cover and vegetation type.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/biomass/biomass-fig5.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 5. Diagnostic plots for the small size class linear model.</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="references" class="level1">
-<h1>References</h1>
-<p>References Cohen J. 1988. Statistical power analysis for the behavioral sciences. 2nd ed.&nbsp;Hillsdale, N.J.: Lawrence Erlbaum Associates.</p>
-<p>McDonald P. and Laacke R. 1990. Pinus radiata D. wwwsrsfsusdagov. https://www.srs.fs.usda.gov/pubs/misc/ag_654/volume_1/pinus/radiata.htm.</p>
-<p>Steiner M. and Baker J. 2018. Measuring Tree Height using a Clinometer | NRI Grazing Land. grazinglandcssmiastateedu. https://grazingland.cssm.iastate.edu/measuring-tree-height-using-clinometer.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
