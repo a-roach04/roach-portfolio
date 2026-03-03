@@ -2,7 +2,7 @@
 title: "Aiden Roach"
 about:
   template: jolla
-  image: profile.jpeg
+  image: profile_pic.jpg
 format: 
   html: 
     justify: TRUE
@@ -27,11 +27,11 @@ Included a variety of roles throughout the lab such as collecting *Danionella dr
 
 ## Professional Experience
 
-Environmental Science Tutor \| Cooperative Learning Center\| November 2025 - Present
+### Environmental Science Tutor \| Cooperative Learning Center\| November 2025 - Present
 
-Front Desk Assistant \| Cooperative Learning Center\| December 2022 - Present
+### Front Desk Assistant \| Cooperative Learning Center\| December 2022 - Present
 
-Instructional Student Assistant \| Department of Mathematics and Statistics\| November 2023 - December 2025
+### Instructional Student Assistant \| Department of Mathematics and Statistics\| November 2023 - December 2025
  
 ## Course Work     
 
