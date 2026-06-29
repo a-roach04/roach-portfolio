@@ -16,6 +16,8 @@ website:
         text: "Purple Urchin Study"
       - href: case_study.qmd
         text: "Ringtail Case Study"
+      - href: capstone.qmd
+        text: "Capstone"
       - href: qfm.qmd
         text: "Other Papers"
 format:

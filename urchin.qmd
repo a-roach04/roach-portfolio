@@ -76,7 +76,7 @@ Thyrring, Jakob, and Christopher D. G. Harley. 2024. “Marine Latitudinal Diver
 
 ### Tables
 
-![Table 1. This table lists the descriptive statistics for the number of Purple Sea Urchins counted at each location. This table is not taking into consideration the tide level the data was collected at. In this table sample size refers to the number of quadrats samples at each location; there were two transects with 11 quadrats on each transect.](figures/urchin/urchin_fig3.jpg)
+![Table 1. This table lists the descriptive statistics for the number of Purple Sea Urchins counted at each location. This table is not taking into consideration the tide level the data was collected at. In this table sample size refers to the number of quadrats samples at each location; there were two transects with 11 quadrats on each transect.](figures/urchin/urchin_fig3.jpg) 
 
 ![Table 2. This table lists the descriptive statistics for the number of Purple Sea Urchins counted at each tide level, it does not take into account the location. In this table “high” is referring to any tide level greater than or equal to 1 foot and “low” is referring to any tide level less than or equal to 0 feet. The sample size of 44 comes from four transects being run at each tide level and 11 quadrats on each transect.](figures/urchin/urchin_fig4.jpg)
 
